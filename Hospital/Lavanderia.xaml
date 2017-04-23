@@ -36,7 +36,7 @@
         <Button Name="todasHabitaciones" Content="Todas las habitaciones" HorizontalAlignment="Left" 
                             Margin="10,273,0,0" VerticalAlignment="Top" Width="140" Height="35"
                              Click="todasHabitaciones_Click"/>
-        
+
         <!-- ProgressBars de lavadoras, más falsas que un euro con la cara de Popeye pero dan el pego  -->
         <Label Content="Lavadora 1"
                            HorizontalAlignment="Left" Margin="265,56,0,0" 
@@ -75,7 +75,7 @@
         <ProgressBar Name="lavadora4" HorizontalAlignment="Left" Height="26" Margin="340,149,0,0"  
                      VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50"    />
         <!-- Fin progressbars -->
-
+        <Button Name="Lavadoras" Content="Detalles" HorizontalAlignment="Left" Margin="340,191,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="Lavadoras_Click"/>
 
 
     </Grid>

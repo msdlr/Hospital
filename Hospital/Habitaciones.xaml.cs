@@ -24,7 +24,7 @@ namespace Hospital
         Random rnd = new Random();
         int[] todashabitaciones = new int[MAX];
         int[] habPrioritarias = new int[6];
-        int anteriorHab;
+        //int anteriorHab;
         //Checkboxes
         //Las checkboxes del formulario son visuales, trabajaremos también con arrays
         Boolean[] ocupada = new Boolean[MAX];

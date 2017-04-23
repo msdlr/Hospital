@@ -20,6 +20,7 @@ namespace Hospital
         const int MAX = 500;                            //Número máximo de habitaciones
         int[] habitacion = new int[MAX];                // Vector de habitaciones
         int[] prioritarias = new int[6];                //Generador aleatorio de Habitaciones con proridad
+        public int[] lavadora = new int[4];
         Random rnd = new Random();                      //Generador de números aleatorios
 //Contructor
         public Lavanderia()
@@ -33,15 +34,21 @@ namespace Hospital
         void generarLavadoras()
         {
             //Generador de las Progressbars aleatorias
-             lavadora1.Value = rnd.Next(0,100);
-             lavadora2.Value = rnd.Next(0,100);
-             lavadora3.Value = rnd.Next(0,100);
-             lavadora4.Value = rnd.Next(0,100);
+            for (int i = 0; i < lavadora.Length; i++)
+            {
+                lavadora[i] = rnd.Next(0, 100);
+            }
+            //Asignación individual a los progressbars (Me da pereza re-hacerlo con Arrays de progressbars)
+            //                      ¯\_(ツ)_/¯
+            lavadora1.Value = lavadora[0];
+            lavadora2.Value = lavadora[1];
+            lavadora3.Value = lavadora[2];
+            lavadora4.Value = lavadora[3];
             //Generador de etiquetas con porcentaje
-            Lavlab1.Content = lavadora1.Value + "%";
-            Lavlab2.Content = lavadora2.Value + "%";
-            Lavlab3.Content = lavadora3.Value + "%";
-            Lavlab4.Content = lavadora4.Value + "%";
+            Lavlab1.Content = lavadora[0] + "%";
+            Lavlab2.Content = lavadora[1] + "%";
+            Lavlab3.Content = lavadora[2] + "%";
+            Lavlab4.Content = lavadora[3] + "%";
 
         }
 
@@ -63,6 +70,12 @@ namespace Hospital
         {
             Habitaciones todasHabs = new Habitaciones( prioritarias ); //Solo necesitamos mandar las habitaciones prioritarias
             todasHabs.Show();                       //Conserva la ventana anterior detrás
+        }
+
+        private void Lavadoras_Click(object sender, RoutedEventArgs e)
+        {
+            Lavadoras ventanaLavadoras = new Lavadoras(lavadora);
+            ventanaLavadoras.Show();
         }
     }
 }

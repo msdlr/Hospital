@@ -18,3 +18,5 @@ D:\Docs\Visual Studio 2017\Projects\Hospital\Hospital\obj\Debug\Lavanderia.g.cs
 D:\Docs\Visual Studio 2017\Projects\Hospital\Hospital\obj\Debug\Lavanderia.baml
 D:\Docs\Visual Studio 2017\Projects\Hospital\Hospital\obj\Debug\Habitaciones.g.cs
 D:\Docs\Visual Studio 2017\Projects\Hospital\Hospital\obj\Debug\Habitaciones.baml
+D:\Docs\Visual Studio 2017\Projects\Hospital\Hospital\obj\Debug\Lavadoras.g.cs
+D:\Docs\Visual Studio 2017\Projects\Hospital\Hospital\obj\Debug\Lavadoras.baml

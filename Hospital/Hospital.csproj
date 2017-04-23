@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Lavadoras.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lavanderia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,9 @@
     </Compile>
     <Compile Include="Habitaciones.xaml.cs">
       <DependentUpon>Habitaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lavadoras.xaml.cs">
+      <DependentUpon>Lavadoras.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lavanderia.xaml.cs">
       <DependentUpon>Lavanderia.xaml</DependentUpon>
