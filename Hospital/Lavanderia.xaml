@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hospital"
         mc:Ignorable="d"
-        Title="Lavanderia" Height="358" Width="517">
+        Title="Lavanderia" Height="358" Width="517"
+        ResizeMode="NoResize">
     <Grid>
         <!-- Habitaciones proritarias -->
         <Label Name="fechaTexto" Content="Label" HorizontalAlignment="Left"
