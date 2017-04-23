@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hospital"
         mc:Ignorable="d"
-        Title="Habitaciones" Height="300" Width="300">
+        Title="Habitaciones" Height="210" Width="300">
     <Grid>
         <Label Content="Seleccione la habitación:" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="251"/>
         <TextBox Name="hab" HorizontalAlignment="Left" Height="25" Margin="10,36,0,0" 
                  TextWrapping="Wrap"  VerticalAlignment="Top" Width="136"
                  />
         <Button Name="datos" Content="Buscar datos" HorizontalAlignment="Left" Margin="158,36,0,0" VerticalAlignment="Top" Width="103" Height="25"
-                 IsDefault="True"/>
+                 Click="datos_Click_1" KeyDown="datos_Click_1" IsDefault="True"/>
         <!-- Click="datos_Click" KeyDown="datos_Click" -->
         
-        <Label Name="infoHab" Content="сука блять" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="136" Height="25"/>
+        <Label Name="infoHab"  HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="251" Height="25"/>
         <CheckBox Name="ocupada_" Content="Ocupada" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top"/>
         <CheckBox Name="ropaRecogida_" Content="Ropa recogida" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Click="ropaRecogida__Click" />
         

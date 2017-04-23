@@ -61,8 +61,7 @@ namespace Hospital
 
         private void todasHabitaciones_Click(object sender, RoutedEventArgs e)
         {
-            Habitaciones todasHabs = new Habitaciones( habitacion, prioritarias );
-            //Envía el string de habitaciones(Vacío en realidad) y las habitaciones prioritarias
+            Habitaciones todasHabs = new Habitaciones( prioritarias ); //Solo necesitamos mandar las habitaciones prioritarias
             todasHabs.Show();                       //Conserva la ventana anterior detrás
         }
     }
