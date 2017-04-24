@@ -30,7 +30,7 @@ namespace prototipo_hospital
             Nombre.Text = paciente.nombre;
             Apellidos.Text = paciente.apellidos;
             Edad.Text = paciente.edad.ToString();
-            fechaNacimiento.DisplayDate = paciente.fechaNacimiento;
+            fechaNacimiento.Content = String.Concat("Fecha de Nacimiento: ", paciente.fechaNacimiento);
             Sexo.Text = paciente.sexo[0];
             direccion.Text = paciente.direccion;
             telefono.Text = paciente.telefono.ToString();

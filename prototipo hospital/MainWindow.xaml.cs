@@ -19,7 +19,7 @@ namespace prototipo_hospital
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     /// 
-
+    
 
     public class datosMedico : Object
     {
@@ -47,18 +47,20 @@ namespace prototipo_hospital
         public string numeroSS = "986458497H";
         public string alergias = "lista de alergias";
         public string observaciones = "observaciones";
-        public DateTime fechaNacimiento = new DateTime(24/07/1992);
+        public string fechaNacimiento = "24/07/1992";
         public string direccion = "Melchor de Macanaz 27, 1ºD, Albacete";
         public int telefono = 685757853;
 
-
-
-
-
-
-
     }
-        public partial class MainWindow : Window
+	public class datosLavanderia : Object
+	{
+		public string nombre = "Jose Martinez ";
+        public string ID = "34516887H";
+        public string usuario = "lavanderia";
+        public string password = "lavanderia";
+	}
+
+    public partial class MainWindow : Window
         {
 
 
@@ -66,6 +68,7 @@ namespace prototipo_hospital
             public MainWindow()
             {
                 InitializeComponent();
+            
 
             }
 
@@ -79,7 +82,7 @@ namespace prototipo_hospital
                     pswd.Password = null;
                 }
 
-                if (user.Text == "farmaceutico" && pswd.Password == "farmaceutico")
+                else if (user.Text == "farmaceutico" && pswd.Password == "farmaceutico")
                 {
 
                 Farmacia farmacia = new Farmacia();
@@ -88,12 +91,16 @@ namespace prototipo_hospital
                 pswd.Password = null;
 
                 }
+                
+				else if (user.Text == "lavanderia" && pswd.Password == "lavanderia")
+				{
+                Lavanderia lavanderia = new Lavanderia();
+				lavanderia.ShowDialog();
+				user.Text = null;
+                pswd.Password = null;
+				}
+                
             }
-
-        private void mainAceptar_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
     }
 
     }

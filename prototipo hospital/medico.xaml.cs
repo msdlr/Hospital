@@ -66,7 +66,7 @@ namespace prototipo_hospital
                     Observaciones.Text = paciente.observaciones;
                     BotonGestionpaciente.IsEnabled = false;
                     gestionarPaciente.IsEnabled = false;
-                    fechaNacimiento.DisplayDate = paciente.fechaNacimiento;
+                    fechaNacimiento.Content = String.Concat("Fecha de Nacimiento: ", paciente.fechaNacimiento);
                     Sexo.Text = paciente.sexo[0];
 
                 }
@@ -108,9 +108,17 @@ namespace prototipo_hospital
                 if (abrirPaciente.pacienteCorrecto == true)
                 {
                     pacienteCargado = true;
+                    datosPaciente paciente = new datosPaciente();
+
                     datosPaciente.Visibility = Visibility.Visible;
+                    Nombre.Text = paciente.nombre;
+                    Apellidos.Text = paciente.apellidos;
+                    Edad.Text = paciente.edad.ToString();
+                    Observaciones.Text = paciente.observaciones;
                     BotonGestionpaciente.IsEnabled = false;
                     gestionarPaciente.IsEnabled = false;
+                    fechaNacimiento.Content = String.Concat("Fecha de Nacimiento: ", paciente.fechaNacimiento);
+                    Sexo.Text = paciente.sexo[0];
 
                 }
 
