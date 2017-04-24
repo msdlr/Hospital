@@ -67,7 +67,7 @@ Title="Gestión Médica" Height="720" Width="1280" >
 
                     <TabItem Header="Medicacion">
                         <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
-                            <Button Name="añadirMedicacion" Content="Añadir Medicacion" HorizontalAlignment="Left" Margin="480,508,0,0" VerticalAlignment="Top" Width="114"/>
+                            <Button Name="añadirMedicacion" Content="Medicacion en planta" HorizontalAlignment="Left" Margin="480,508,0,0" VerticalAlignment="Top" Width="135"/>
                             <DataGrid Name="listaMedicacion" HorizontalAlignment="Left" Height="440" Margin="60,32,0,0" VerticalAlignment="Top" Width="613" >
 
                             </DataGrid>

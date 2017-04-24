@@ -61,19 +61,19 @@
                 <Label Name="informeConsulta" Content="Informe de Consulta:" HorizontalAlignment="Left" Margin="10,243,0,0" VerticalAlignment="Top" Width="201" FontSize="18"/>
 
                 <Label Content="Motivo de Ingreso-Consulta" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top"/>
-                <TextBox Name="motivoIngreso" HorizontalAlignment="Left" Height="74" Margin="10,324,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1235"/>
+                <TextBox Name="motivoIngreso" HorizontalAlignment="Left" Height="74" Margin="10,324,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1235"/>
 
                 <Label Content="Antecedentes Personales" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top"/>
-                <TextBox Name="antecedentesPersonales" HorizontalAlignment="Left" Height="74" Margin="10,424,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1235"/>
+                <TextBox Name="antecedentesPersonales" HorizontalAlignment="Left" Height="74" Margin="10,424,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1235"/>
 
                 <Label Content="Enfermedad Actual" HorizontalAlignment="Left" Margin="10,498,0,0" VerticalAlignment="Top"/>
-                <TextBox Name="enfermedadActual" HorizontalAlignment="Left" Height="74" Margin="10,524,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1235"/>
+                <TextBox Name="enfermedadActual" HorizontalAlignment="Left" Height="74" Margin="10,524,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1235"/>
 
                 <Label Content="Exploración Física" HorizontalAlignment="Left" Margin="10,598,0,0" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="74" Margin="10,624,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1235"/>
+                <TextBox HorizontalAlignment="Left" Height="74" Margin="10,624,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1235"/>
 
                 <Label Content="Diagnostico" HorizontalAlignment="Left" Margin="10,698,0,0" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="74" Margin="10,724,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1235"/>
+                <TextBox HorizontalAlignment="Left" Height="74" Margin="10,724,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="1235"/>
 
 
                 <Label Content="Fecha de Cita" HorizontalAlignment="Left" Margin="280,123,0,0" VerticalAlignment="Top"/>
