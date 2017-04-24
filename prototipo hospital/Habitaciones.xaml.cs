@@ -81,6 +81,10 @@ namespace prototipo_hospital
             {
                 ropaPlanchada[habInt] = false;
             }
+            for (int i = 0; i < MAX; i++)
+            {
+                
+            }
         }
 
 
@@ -124,11 +128,11 @@ namespace prototipo_hospital
                 {
                     if (rnd.Next(1, 10) % 2 == 1)
                     {
-                        ocupada_.IsChecked = false;                 //Libre
+                        ocupada[i].IsChecked = false;                 //Libre
                     }
                     else
                     {
-                        ocupada_.IsChecked = true;                  //Ocupada
+                        ocupada[i].IsChecked = true;                  //Ocupada
                     }
                 }
                 first = false;                                        //Ya no es la primera vez, no se actualizan los datos

@@ -19,7 +19,7 @@ namespace prototipo_hospital
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     /// 
-
+    
 
     public class datosMedico : Object
     {
@@ -59,7 +59,8 @@ namespace prototipo_hospital
         public string usuario = "lavanderia";
         public string password = "lavanderia";
 	}
-        public partial class MainWindow : Window
+
+    public partial class MainWindow : Window
         {
 
 
@@ -67,6 +68,7 @@ namespace prototipo_hospital
             public MainWindow()
             {
                 InitializeComponent();
+            
 
             }
 
@@ -99,11 +101,6 @@ namespace prototipo_hospital
 				}
                 
             }
-
-        private void mainAceptar_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
     }
 
     }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\
+C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\
 prototipo_hospital
 none
 false
 DEBUG;TRACE
-D:\Desktop\Hospital - test\prototipo hospital\App.xaml
+C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\App.xaml
 81151268497
 
-16203858362
+161713519873
 13738642453
 Farmacia.xaml;Habitaciones.xaml;informedeConsulta.xaml;Lavadoras.xaml;Lavanderia.xaml;MainWindow.xaml;medico.xaml;NumeroPaciente.xaml;
 
-False
+True
 
