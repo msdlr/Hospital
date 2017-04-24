@@ -1,0 +1,49 @@
+﻿<Window x:Class="prototipo_hospital.Farmacia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prototipo_hospital"
+       mc:Ignorable="d"
+        Title="Farmacia" Height="720" Width="1280" Closing="Window_Closing"  Loaded="Window_Loaded" >
+
+    <Grid HorizontalAlignment="Left" Height="689" VerticalAlignment="Top" Width="1272">
+        <Grid HorizontalAlignment="Left" Height="638" Margin="0,46,0,0" VerticalAlignment="Top" Width="1272">
+            <Menu HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="1262">
+                <Button Content="Gestionar Pacientes" Name="botomGesPacientes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="23"/>
+                <Button Content="Gestionar Farmacos" Name="botonGesFarmacos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="23" />
+                <Button Content="Salir" Name="botonSalir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="23" Click="botonSalir_Click" />
+            </Menu>
+            <TabControl HorizontalAlignment="Left" Height="598" Margin="0,30,0,0" VerticalAlignment="Top" Width="1262">
+                <TabItem Header="Almacen">
+                    <Grid Background="#FFE5E5E5">
+                        <DataGrid Name="medicamentos" AutoGenerateColumns="True" Height="550" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="1226" />
+                        <!--width = "auto"-->
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Pacientes">
+                    <Grid Background="#FFE5E5E5">
+                        <DataGrid Name="habitaciones" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="550" Margin="10,10,0,0" VerticalAlignment="Top" Width="600"/>
+                        <!--width = "auto"-->
+                        <DataGrid Name="datosPacientes" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="550" Margin="636,10,0,0" VerticalAlignment="Top" Width="600"/>
+                        <!--width = "auto"-->
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+        <DockPanel  Name="dockPanell" Height="auto" VerticalAlignment="Top">
+            <Menu Name="menuGestionMedica" Height="23" VerticalAlignment="Top" Width="1272" DockPanel.Dock="Top">
+                <MenuItem Height="23" Header="_Archivo" Width="Auto" >
+                    <MenuItem Name="gestionarPaciente" Header="Gestión de _Pacientes"/>
+                    <MenuItem Name="gestionarFarmacos" Header="Gestión de _Farmacos" />
+                    <MenuItem Name="salir" Header="_Salir"/>
+                </MenuItem>
+                <MenuItem Height="23" Header="Ayuda" >
+                    <MenuItem Name="ayuda" Header="_Manual"/>
+                </MenuItem>
+            </Menu>
+            <Label Name="nombreFarmaceutico" Content="nombreFarmaceutico" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
+            <Label Name="idFarmaceutico" Content="idFarmaceutico" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,0" Width="62" />
+        </DockPanel>
+    </Grid>
+</Window>

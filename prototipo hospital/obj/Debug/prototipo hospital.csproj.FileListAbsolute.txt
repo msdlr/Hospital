@@ -1,0 +1,22 @@
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo hospital.csprojResolveAssemblyReference.cache
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\MainWindow.g.cs
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\App.g.cs
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo hospital_MarkupCompile.cache
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo hospital_MarkupCompile.lref
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\bin\Debug\prototipo hospital.exe.config
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\bin\Debug\prototipo hospital.exe
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\bin\Debug\prototipo hospital.pdb
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\MainWindow.baml
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo hospital.g.resources
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo_hospital.Properties.Resources.resources
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo hospital.csproj.GenerateResource.Cache
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo hospital.exe
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\prototipo hospital.pdb
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\medico.g.cs
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\NumeroPaciente.g.cs
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\medico.baml
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\NumeroPaciente.baml
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\Farmacia.g.cs
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\Farmacia.baml
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\informeDeConsulta.g.cs
+D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\informeDeConsulta.baml
