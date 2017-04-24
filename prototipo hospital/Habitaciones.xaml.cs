@@ -128,11 +128,11 @@ namespace prototipo_hospital
                 {
                     if (rnd.Next(1, 10) % 2 == 1)
                     {
-                        ocupada[i].IsChecked = false;                 //Libre
+                        ocupada_.IsChecked = false;                 //Libre
                     }
                     else
                     {
-                        ocupada[i].IsChecked = true;                  //Ocupada
+                        ocupada_.IsChecked = true;                  //Ocupada
                     }
                 }
                 first = false;                                        //Ya no es la primera vez, no se actualizan los datos
