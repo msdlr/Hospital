@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< HEAD
 FC:\Users\pablo\Desktop\Hospital\prototipo hospital\Farmacia.xaml;;
 FC:\Users\pablo\Desktop\Hospital\prototipo hospital\Habitaciones.xaml;;
 FC:\Users\pablo\Desktop\Hospital\prototipo hospital\informedeConsulta.xaml;;
@@ -8,4 +9,14 @@ FC:\Users\pablo\Desktop\Hospital\prototipo hospital\Lavanderia.xaml;;
 FC:\Users\pablo\Desktop\Hospital\prototipo hospital\MainWindow.xaml;;
 FC:\Users\pablo\Desktop\Hospital\prototipo hospital\medico.xaml;;
 FC:\Users\pablo\Desktop\Hospital\prototipo hospital\NumeroPaciente.xaml;;
+=======
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\Farmacia.xaml;;
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\Habitaciones.xaml;;
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\informedeConsulta.xaml;;
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\Lavadoras.xaml;;
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\Lavanderia.xaml;;
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\MainWindow.xaml;;
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\medico.xaml;;
+FC:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\NumeroPaciente.xaml;;
+>>>>>>> f27a0c0b4ac125448c285b6099032a51ce82d356
 

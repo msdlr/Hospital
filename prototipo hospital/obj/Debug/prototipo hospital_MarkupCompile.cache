@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\
+=======
+C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\
+>>>>>>> f27a0c0b4ac125448c285b6099032a51ce82d356
 prototipo_hospital
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\pablo\Desktop\Hospital\prototipo hospital\App.xaml
+=======
+C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\App.xaml
+>>>>>>> f27a0c0b4ac125448c285b6099032a51ce82d356
 81151268497
 
 12-733440448

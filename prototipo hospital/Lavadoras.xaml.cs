@@ -27,7 +27,7 @@ namespace prototipo_hospital
         TextBox[] blancaDescargada = new TextBox[4];
         TextBox[] colorDescargada = new TextBox[4];
         TextBox[] negraDescargada = new TextBox[4];
-
+        Boolean first = true;
 
         //Constructores
         public Lavadoras(int[] Cargas)
@@ -36,10 +36,10 @@ namespace prototipo_hospital
             int[] cargaLavadoras = Cargas;
             //Actualización de las etiquetas de cargas de cada lavadora en cada pestaña
             carga1.Content = String.Concat(carga1.Content, Cargas[0], " %");
-            //2
-            //3
-            //4
-
+            carga2.Content = String.Concat(carga2.Content, Cargas[1], " %");
+            carga3.Content = String.Concat(carga3.Content, Cargas[2], " %");
+            carga4.Content = String.Concat(carga4.Content, Cargas[3], " %");
+            
             colorRopa(blanca, color, negra); //Crea los valores de ropa blanca, de color y negra
 
 
@@ -49,40 +49,75 @@ namespace prototipo_hospital
 
         void colorRopa(int[] blanca, int[] color, int[] negra) //Establece y cambia el valor de las etiquetas, inicialmente y al descarglas
         {
+            
             //Suponiendo que la carga máxima son 150kg (No pensé que dependiendo del color se lavaban separadas o juntas lmao)
             //Creación aleatoria de la ropa de distintos colores
-            for (int i = 0; i < 4; i++)
+            if (first)
             {
-                blanca[i] = rnd.Next(0, 50);
-                color[i] = rnd.Next(0, 50);
-                negra[i] = 150 - (blanca[i] + color[i]);
+                for (int i = 0; i < 4; i++)
+                {
+
+                    blanca[i] = rnd.Next(0, 50);
+                    color[i] = rnd.Next(0, 50);
+                    negra[i] = 150 - blanca[i] - color[i];
+                }
+                first = false;
             }
 
-
             //Ropa blanca
-            blanca1Texto.Content = String.Concat(blanca1Texto.Content, " ", blanca[0], " Kg");
-
-
-
+            blanca1Texto.Content = String.Concat("Ropa blanca: ", " ", blanca[0], " Kg");
+            blanca2Texto.Content = String.Concat("Ropa blanca: ", " ", blanca[1], " Kg");
+            blanca3Texto.Content = String.Concat("Ropa blanca: ", " ", blanca[2], " Kg");
+            blanca4Texto.Content = String.Concat("Ropa blanca: ", " ", blanca[3], " Kg");
+            
             //Ropa de color
-            color1Texto.Content = String.Concat(color1Texto.Content, " ", negra[0], " Kg");
-
-
-
+            color1Texto.Content = String.Concat("Ropa de color: ", color[0], " Kg");
+            color2Texto.Content = String.Concat("Ropa de color: ", color[1], " Kg");
+            color3Texto.Content = String.Concat("Ropa de color: ", color[2], " Kg");
+            color4Texto.Content = String.Concat("Ropa de color: ", color[3], " Kg");
+            
             //Ropa negra
-            negra1Texto.Content = String.Concat(negra1Texto.Content, " ", negra[0], " Kg");
+            negra1Texto.Content = String.Concat("Ropa negra: ", negra[0], " Kg");
+            negra2Texto.Content = String.Concat("Ropa negra: ", negra[1], " Kg");
+            negra3Texto.Content = String.Concat("Ropa negra: ", negra[2], " Kg");
+            negra4Texto.Content = String.Concat("Ropa negra: ", negra[3], " Kg");
 
         }
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            blanca[0] -= Convert.ToInt32(blanca1Descargada);
+            blanca[0] -= Convert.ToInt32(blanca1Descargada.Text);
+            blanca[1] -= Convert.ToInt32(blanca2Descargada.Text);
+            blanca[2] -= Convert.ToInt32(blanca3Descargada.Text);
+            blanca[3] -= Convert.ToInt32(blanca4Descargada.Text);
             //
-            color[0] -= Convert.ToInt32(color1Descargada);
+            color[0] -= Convert.ToInt32(color1Descargada.Text);
+            color[1] -= Convert.ToInt32(color2Descargada.Text);
+            color[2] -= Convert.ToInt32(color3Descargada.Text);
+            color[3] -= Convert.ToInt32(color4Descargada.Text);
             //
-            negra[0] -= Convert.ToInt32(negra1Descargada);
+            negra[0] -= Convert.ToInt32(negra1Descargada.Text);
+            negra[1] -= Convert.ToInt32(negra2Descargada.Text);
+            negra[2] -= Convert.ToInt32(negra3Descargada.Text);
+            negra[3] -= Convert.ToInt32(negra4Descargada.Text);
             //
+            for (int i = 0; i < 4; i += 1)      //Si se pone que se ha descargado más del peso que hay el peso pasa a 0
+            {
+                if (blanca[i] < 0)
+                {
+                    blanca[i] = 0;
+                }
+                if (color[i] < 0)
+                {
+                    color[i] = 0;
+                }
+                if (negra[i] < 0)
+                {
+                    negra[i] = 0;
+                }
+                colorRopa(blanca, color, negra);
+            }
         }
     }
 }

@@ -17,38 +17,85 @@
                     <!--
                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="266" Margin="10,10,0,0"/>
                     -->
+                    <!-- Elementos que se repiten en las 4 lavadoras -->
                     <Label Name="carga1" Content="Carga de la lavadora 1: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="257"/>
-
                     <Label Name="blanca1Texto" Content="Ropa blanca: " HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="125"/>
                     <Label Name="color1Texto" Content="Ropa de color: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="125"/>
                     <Label Name="negra1Texto" Content="Ropa de negra: " HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="125"/>
-                    <Label Content="DESCARGADAR" HorizontalAlignment="Left" Margin="147,47,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="DESCARGAR" HorizontalAlignment="Left" Margin="147,47,0,0" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="blanca1Descargada" HorizontalAlignment="Left" Height="26" Margin="147,78,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="color1Descargada" HorizontalAlignment="Left" Height="26" Margin="147,109,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="negra1Descargada" HorizontalAlignment="Left" Height="26" Margin="147,140,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
                     <Button Content="Actualizar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="147,181,0,0" Height="30" Click="Button_Click"/>
+                    <!-- -->
 
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Lavadora 2">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
+                    <!--
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="266" Margin="10,10,0,0"/>
+                    -->
+                    <!-- Elementos que se repiten en las 4 lavadoras -->
+                    <Label Name="carga2" Content="Carga de la lavadora 1: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="257"/>
+                    <Label Name="blanca2Texto" Content="Ropa blanca: " HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Name="color2Texto" Content="Ropa de color: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Name="negra2Texto" Content="Ropa de negra: " HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Content="DESCARGAR" HorizontalAlignment="Left" Margin="147,47,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="blanca2Descargada" HorizontalAlignment="Left" Height="26" Margin="147,78,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="color2Descargada" HorizontalAlignment="Left" Height="26" Margin="147,109,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="negra2Descargada" HorizontalAlignment="Left" Height="26" Margin="147,140,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Actualizar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="147,181,0,0" Height="30" Click="Button_Click"/>
+                    <!-- -->
 
 
                 </Grid>
             </TabItem>
 
-            <!-- Pestaña 2 -->
-            <TabItem Header="Lavadora 2">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-
-            <!-- Pestaña 3 -->
             <TabItem Header="Lavadora 3">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
+                    <!--
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="266" Margin="10,10,0,0"/>
+                    -->
+                    <!-- Elementos que se repiten en las 4 lavadoras -->
+                    <Label Name="carga3" Content="Carga de la lavadora : " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="257"/>
+                    <Label Name="blanca3Texto" Content="Ropa blanca: " HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Name="color3Texto" Content="Ropa de color: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Name="negra3Texto" Content="Ropa de negra: " HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Content="DESCARGAR" HorizontalAlignment="Left" Margin="147,47,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="blanca3Descargada" HorizontalAlignment="Left" Height="26" Margin="147,78,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="color3Descargada" HorizontalAlignment="Left" Height="26" Margin="147,109,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="negra3Descargada" HorizontalAlignment="Left" Height="26" Margin="147,140,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Actualizar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="147,181,0,0" Height="30" Click="Button_Click"/>
+                    <!-- -->
 
-            <!-- Pestaña 4 -->
+
+                </Grid>
+            </TabItem>
             <TabItem Header="Lavadora 4">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
+                    <!--
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="266" Margin="10,10,0,0"/>
+                    -->
+                    <!-- Elementos que se repiten en las 4 lavadoras -->
+                    <Label Name="carga4" Content="Carga de la lavadora 1: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="257"/>
+                    <Label Name="blanca4Texto" Content="Ropa blanca: " HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Name="color4Texto" Content="Ropa de color: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Name="negra4Texto" Content="Ropa de negra: " HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="125"/>
+                    <Label Content="DESCARGAR" HorizontalAlignment="Left" Margin="147,47,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="blanca4Descargada" HorizontalAlignment="Left" Height="26" Margin="147,78,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="color4Descargada" HorizontalAlignment="Left" Height="26" Margin="147,109,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="negra4Descargada" HorizontalAlignment="Left" Height="26" Margin="147,140,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Actualizar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="147,181,0,0" Height="30" Click="Button_Click"/>
+                    <!-- -->
 
-            <!-- Labels que están en todas las pestañas -->
+
+                </Grid>
+            </TabItem>
 
 
         </TabControl>
