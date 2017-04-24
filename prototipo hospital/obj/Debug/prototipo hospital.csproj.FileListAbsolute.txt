@@ -20,3 +20,14 @@ D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2
 D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\Farmacia.baml
 D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\informeDeConsulta.g.cs
 D:\Pablo\universidad\Asignaturas\Sistemas de la informacion\Modulo 3\prototipo 2.2\prototipo hospital\prototipo hospital\obj\Debug\informeDeConsulta.baml
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\prototipo hospital.csprojResolveAssemblyReference.cache
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\Farmacia.g.cs
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\informedeConsulta.g.cs
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\MainWindow.g.cs
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\medico.g.cs
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\NumeroPaciente.g.cs
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\App.g.cs
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\prototipo hospital_MarkupCompile.cache
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\prototipo hospital_MarkupCompile.lref
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\prototipo hospital.exe
+D:\Desktop\Hospital - test\prototipo hospital\obj\Debug\prototipo hospital.pdb

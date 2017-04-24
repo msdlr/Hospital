@@ -51,13 +51,14 @@ namespace prototipo_hospital
         public string direccion = "Melchor de Macanaz 27, 1ºD, Albacete";
         public int telefono = 685757853;
 
-
-
-
-
-
-
     }
+	public class datosLavanderia : Object
+	{
+		public string nombre = "Jose Martinez ";
+        public string ID = "34516887H";
+        public string usuario = "lavanderia";
+        public string password = "lavanderia";
+	}
         public partial class MainWindow : Window
         {
 
@@ -79,7 +80,7 @@ namespace prototipo_hospital
                     pswd.Password = null;
                 }
 
-                if (user.Text == "farmaceutico" && pswd.Password == "farmaceutico")
+                else if (user.Text == "farmaceutico" && pswd.Password == "farmaceutico")
                 {
 
                 Farmacia farmacia = new Farmacia();
@@ -88,6 +89,15 @@ namespace prototipo_hospital
                 pswd.Password = null;
 
                 }
+                
+				else if (user.Text == "lavanderia" && pswd.Password == "lavanderia")
+				{
+                Lavanderia lavanderia = new Lavanderia();
+				lavanderia.ShowDialog();
+				user.Text = null;
+                pswd.Password = null;
+				}
+                
             }
 
         private void mainAceptar_KeyDown(object sender, KeyEventArgs e)
