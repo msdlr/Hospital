@@ -50,7 +50,14 @@ namespace prototipo_hospital
         public string fechaNacimiento = "24/07/1992";
         public string direccion = "Melchor de Macanaz 27, 1ºD, Albacete";
         public int telefono = 685757853;
-
+        
+    }
+    public class medicacionPaciente : Object
+    {
+        public string Nombre;
+        public string Codigo;
+        public string Descripcion;
+        public int Existencias;
     }
 	public class datosLavanderia : Object
 	{

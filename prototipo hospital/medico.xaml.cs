@@ -58,7 +58,7 @@ namespace prototipo_hospital
                 {
                     pacienteCargado = true;
                     datosPaciente paciente = new datosPaciente();
-                    
+                    medicacionPaciente medicacion = new medicacionPaciente();
                     datosPaciente.Visibility = Visibility.Visible;
                     Nombre.Text = paciente.nombre;
                     Apellidos.Text = paciente.apellidos;
@@ -68,7 +68,7 @@ namespace prototipo_hospital
                     gestionarPaciente.IsEnabled = false;
                     fechaNacimiento.Content = String.Concat("Fecha de Nacimiento: ", paciente.fechaNacimiento);
                     Sexo.Text = paciente.sexo[0];
-
+                    
                 }
 
             }
@@ -132,5 +132,7 @@ namespace prototipo_hospital
             nuevaConsulta.ShowDialog();
 
         }
+
+
     }
 }
