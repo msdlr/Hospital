@@ -47,7 +47,7 @@ namespace prototipo_hospital
         public string numeroSS = "986458497H";
         public string alergias = "lista de alergias";
         public string observaciones = "observaciones";
-        public DateTime fechaNacimiento = new DateTime(24/07/1992);
+        public string fechaNacimiento = "24/07/1992";
         public string direccion = "Melchor de Macanaz 27, 1ºD, Albacete";
         public int telefono = 685757853;
 
