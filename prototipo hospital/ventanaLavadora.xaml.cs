@@ -19,24 +19,34 @@ namespace prototipo_hospital
     /// </summary>
     public partial class ventanaLavadora : Window
     {
+        int blancaLocal;
+        int colorLocal;
+        int negraLocal;
+        
+        Random cyka = new Random();
         public ventanaLavadora()
         {
             InitializeComponent();
+
+
+            blancaTexto.Content = String.Concat("Ropa blanca: ", " ", blancaLocal, " Kg");
+            colorTexto.Content = String.Concat("Ropa blanca: ", " ", colorLocal, " Kg");
+            negraTexto.Content = String.Concat("Ropa blanca: ", " ", negraLocal, " Kg");
         }
         public ventanaLavadora(int porcentaje, int blanca, int color, int negra)
         {
-            //int porcentajeLocal = porcentaje;
-            int porcentajeLocal = porcentaje;
-            int blancaLocal = blanca;
-            int colorLocal = color;
-            int negraLocal = negra;
             InitializeComponent();
+
+            blancaTexto.Content = String.Concat("Ropa blanca: ", " ", blanca, " Kg");
+            colorTexto.Content = String.Concat("Ropa blanca: ", " ", color, " Kg");
+            negraTexto.Content = String.Concat("Ropa blanca: ", " ", negra, " Kg");
+
         }
-        //        blancaTexto.Content = String.Concat("Ropa blanca: ", " ", blanca[0], " Kg");
 
-        //Labels
+        private void Actualizar_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
-       
     }
 }

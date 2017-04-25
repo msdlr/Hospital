@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
-        Title="ventanaLavadora" Height="300" Width="569.896">
+        Title="ventanaLavadora" Height="288.581" Width="500">
     <Grid Margin="0">
         <!-- Elementos que se repiten en las 4 lavadoras -->
         <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
@@ -18,7 +18,7 @@
         <TextBox Name="blancaDescargar" HorizontalAlignment="Left" Height="26" Margin="147,78,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="colorDescargar" HorizontalAlignment="Left" Height="26" Margin="147,109,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="negraDescargar" HorizontalAlignment="Left" Height="26" Margin="147,140,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-        <Button Name="Actualizar" Content="Actualizar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="267" Margin="147,181,0,0" Height="30"/>
+        <Button Name="Actualizar" Content="Actualizar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="267" Margin="147,181,0,0" Height="30" Click="Actualizar_Click" />
         <TextBox x:Name="blancaCargar" HorizontalAlignment="Left" Height="26" Margin="294,78,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="colorCargar" HorizontalAlignment="Left" Height="26" Margin="294,109,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="negraCargar" HorizontalAlignment="Left" Height="26" Margin="294,140,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
