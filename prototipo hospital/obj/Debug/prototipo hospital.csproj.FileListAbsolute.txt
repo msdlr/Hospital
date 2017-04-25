@@ -26,3 +26,5 @@ C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\prototipo_hosp
 C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\prototipo hospital.csproj.GenerateResource.Cache
 C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\prototipo hospital.exe
 C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\prototipo hospital.pdb
+C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\ventanaLavadora.g.cs
+C:\Users\msdlr\Desktop\Hospital-test\prototipo hospital\obj\Debug\ventanaLavadora.baml

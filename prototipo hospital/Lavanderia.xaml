@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
- Title="Lavanderia" Height="358" Width="517"
+ Title="Lavanderia" Height="358" Width="671.844"
         ResizeMode="NoResize">
     <Grid>
         <!-- Habitaciones proritarias -->
@@ -75,8 +75,12 @@
         <ProgressBar Name="lavadora4" HorizontalAlignment="Left" Height="26" Margin="340,149,0,0"  
                      VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50"    />
         <!-- Fin progressbars -->
+        <!--
         <Button Name="Lavadoras" Content="Detalles" HorizontalAlignment="Left" Margin="340,191,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="Lavadoras_Click"/>
-
-
+        -->
+        <Button Name="detalles1" Content="Detalles" HorizontalAlignment="Left" Margin="499,56,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles1_Click"/>
+        <Button Name="detalles2" Content="Detalles" HorizontalAlignment="Left" Margin="499,87,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles2_Click"/>
+        <Button Name="detalles3" Content="Detalles" HorizontalAlignment="Left" Margin="499,118,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles3_Click"/>
+        <Button Name="detalles4" Content="Detalles" HorizontalAlignment="Left" Margin="499,149,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles4_Click"/>
     </Grid>
 </Window>

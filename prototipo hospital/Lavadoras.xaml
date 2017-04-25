@@ -13,11 +13,11 @@
             <!-- Pestaña 1 -->
             <TabItem Header="Lavadora 1">
                 <Grid Background="#FFE5E5E5">
-                    <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
                     <!--
                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="266" Margin="10,10,0,0"/>
                     -->
                     <!-- Elementos que se repiten en las 4 lavadoras -->
+                    <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
                     <Label Name="carga1" Content="Carga de la lavadora 1: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="257"/>
                     <Label Name="blanca1Texto" Content="Ropa blanca: " HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="125"/>
                     <Label Name="color1Texto" Content="Ropa de color: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="125"/>
