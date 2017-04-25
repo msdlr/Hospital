@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
-        Title="informedeConsulta" Height="720" Width="1280">
+        Title="Informe De Consulta" Height="720" Width="1280">
     <Grid>
 
         <DockPanel  Name="dockPanell" HorizontalAlignment="Stretch" Height="23" Margin="0,0,0,0" VerticalAlignment="Top" Width="auto">
@@ -24,8 +24,6 @@
 
         <ScrollViewer Margin="0,23,0,0">
             <Grid Height="831">
-
-
 
 
                 <Label Content="Edad" HorizontalAlignment="Left" Margin="0,92,0,0" VerticalAlignment="Top"/>
@@ -77,10 +75,8 @@
 
 
                 <Label Content="Fecha de Cita" HorizontalAlignment="Left" Margin="280,123,0,0" VerticalAlignment="Top"/>
-                <DatePicker x:Name="fechadeCita" HorizontalAlignment="Left" Margin="355,156,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-                
-
-
+                <DatePicker x:Name="fechadeCita" HorizontalAlignment="Left" Margin="355,156,0,0" VerticalAlignment="Top" IsEnabled="True"/>
+         
 
             </Grid>
         </ScrollViewer>
