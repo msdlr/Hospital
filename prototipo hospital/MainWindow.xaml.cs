@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace prototipo_hospital
 {
@@ -81,11 +82,25 @@ namespace prototipo_hospital
             public MainWindow()
             {
                 InitializeComponent();
-            
+            startclock();
+           
 
             }
 
-            private void mainAceptar_Click(object sender, RoutedEventArgs e)
+        private void startclock()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += tickevent;
+            timer.Start();
+        }
+
+        private void tickevent(object sender, EventArgs e)
+        {
+            reloj.Text = DateTime.Now.ToString();
+        }
+
+        private void mainAceptar_Click(object sender, RoutedEventArgs e)
             {
                 if (user.Text == "medico" && pswd.Password == "medico")
                 {

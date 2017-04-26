@@ -58,3 +58,35 @@ C:\Users\msdlr\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo_hospital.
 C:\Users\msdlr\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.csproj.GenerateResource.Cache
 C:\Users\msdlr\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.exe
 C:\Users\msdlr\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.pdb
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\bin\Debug\prototipo hospital.exe.config
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\bin\Debug\prototipo hospital.exe
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\bin\Debug\prototipo hospital.pdb
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.csprojResolveAssemblyReference.cache
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Farmacia.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Habitaciones.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\informedeConsulta.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Lavadoras.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Lavanderia.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\MainWindow.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\medico.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\NumeroPaciente.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\ventanaLavadora.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\App.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital_MarkupCompile.cache
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital_MarkupCompile.lref
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Farmacia.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Habitaciones.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\informedeConsulta.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Lavadoras.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Lavanderia.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\MainWindow.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\medico.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\NumeroPaciente.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\ventanaLavadora.baml
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.g.resources
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo_hospital.Properties.Resources.resources
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.csproj.GenerateResource.Cache
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.exe
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\prototipo hospital.pdb
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Agenda Personal.g.cs
+C:\Users\pablo\Desktop\Hospital\prototipo hospital\obj\Debug\Agenda Personal.baml

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
-Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" >
+Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Background="#aec6cf" >
 
 
     <Grid>
@@ -15,7 +15,7 @@ Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" >
                 <Menu Name="menuPrincipal" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="1272">
                     <Button x:Name="BotonGestionpaciente" Content="Gestionar Paciente" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Margin="0,0,0,0" Click="BotonGestionpaciente_Click"  />
                     <Button x:Name="botonGuardarCambios" Content="Guardar Cambios" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Margin="0,0,0,0" Click="botonGuardarCambios_Click"/>
-                    <Button x:Name="botonCitas" Content="Citas Pendientes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Click="botonSalida_Click"/>
+                    <Button x:Name="botonCitas" Content="Citas Pendientes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Click="botonCitas_Click"/>
                     <Button x:Name="botonSalida" Content="Salida" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Margin="0,0,0,0" Click="botonSalida_Click"/>
                     
 

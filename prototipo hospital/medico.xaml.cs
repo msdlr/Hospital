@@ -157,5 +157,11 @@ namespace prototipo_hospital
                 //boton1_click = boton.Click;
             };
         }
+
+        private void botonCitas_Click(object sender, RoutedEventArgs e)
+        {
+            Agenda_Personal agenda = new Agenda_Personal();
+            agenda.ShowDialog();
+        }
     }
 }
