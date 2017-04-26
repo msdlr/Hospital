@@ -30,15 +30,15 @@ namespace prototipo_hospital
         Boolean first = true;
 
         //Constructores
-        public Lavadoras(int[] Cargas)
+        public Lavadoras(int[] porcentaje)
         {
             InitializeComponent();
-            int[] cargaLavadoras = Cargas;
-            //Actualización de las etiquetas de cargas de cada lavadora en cada pestaña
-            carga1.Content = String.Concat(carga1.Content, Cargas[0], " %");
-            carga2.Content = String.Concat(carga2.Content, Cargas[1], " %");
-            carga3.Content = String.Concat(carga3.Content, Cargas[2], " %");
-            carga4.Content = String.Concat(carga4.Content, Cargas[3], " %");
+            int[] procesoLavadoras = porcentaje;
+            //Actualización de las etiquetas de porcentaje de cada lavadora en cada pestaña
+            carga1.Content = String.Concat(carga1.Content, porcentaje[0], " %");
+            carga2.Content = String.Concat(carga2.Content, porcentaje[1], " %");
+            carga3.Content = String.Concat(carga3.Content, porcentaje[2], " %");
+            carga4.Content = String.Concat(carga4.Content, porcentaje[3], " %");
             
             colorRopa(blanca, color, negra); //Crea los valores de ropa blanca, de color y negra
 

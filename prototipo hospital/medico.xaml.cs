@@ -25,8 +25,9 @@ namespace prototipo_hospital
 
     public partial class medico : Window
     {
-              
-
+        public Button boton1 = new Button();
+        public Button boton = new Button();
+        
         public int IDPaciente = 111222333;
        
 
@@ -58,7 +59,7 @@ namespace prototipo_hospital
                 {
                     pacienteCargado = true;
                     datosPaciente paciente = new datosPaciente();
-                    
+                    medicacionPaciente medicacion = new medicacionPaciente();
                     datosPaciente.Visibility = Visibility.Visible;
                     Nombre.Text = paciente.nombre;
                     Apellidos.Text = paciente.apellidos;
@@ -68,12 +69,14 @@ namespace prototipo_hospital
                     gestionarPaciente.IsEnabled = false;
                     fechaNacimiento.Content = String.Concat("Fecha de Nacimiento: ", paciente.fechaNacimiento);
                     Sexo.Text = paciente.sexo[0];
-
+                    
                 }
 
             }
 
         }
+
+
 
         private void Salir_Click(object sender, RoutedEventArgs e)
         {
@@ -131,6 +134,28 @@ namespace prototipo_hospital
             informedeConsulta nuevaConsulta = new informedeConsulta(paciente2);
             nuevaConsulta.ShowDialog();
 
+        }
+//borrar este metodo
+        private void boton1_click(object sender, RoutedEventArgs e)
+        {
+            datosPaciente paciente2 = new datosPaciente();
+            informedeConsulta nuevaConsulta = new informedeConsulta(paciente2);
+            nuevaConsulta.ShowDialog();
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            listaMedicacion.ItemsSource = new medicacionPaciente[]
+            {
+                new medicacionPaciente{ Nombre = "Medicacion 1", Codigo= "1", Descripcion="medicacion 1", UltimaFecha= "21/3/2016"},
+                new medicacionPaciente{ Nombre = "Medicacion 2", Codigo= "1", Descripcion="medicacion 2", UltimaFecha= "21/3/2016"},
+                new medicacionPaciente{ Nombre = "Medicacion 3", Codigo= "1", Descripcion="medicacion 3", UltimaFecha= "21/3/2016"},
+                new medicacionPaciente{ Nombre = "Medicacion 4", Codigo= "1", Descripcion="medicacion 4", UltimaFecha= "21/3/2016"},
+                new medicacionPaciente{ Nombre = "Medicacion 5", Codigo= "1", Descripcion="medicacion 5", UltimaFecha= "21/3/2016"},
+                new medicacionPaciente{ Nombre = "Medicacion 6", Codigo= "1", Descripcion="medicacion 6", UltimaFecha= "21/3/2016"},
+                //boton1_click = boton.Click;
+            };
         }
     }
 }
