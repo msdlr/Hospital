@@ -102,12 +102,25 @@ namespace prototipo_hospital
 
         private void mainAceptar_Click(object sender, RoutedEventArgs e)
             {
+                if (user.Text != pswd.Password)
+                {
+                MessageBox.Show("Los datos introducidos son incorrectos");
+                }
+
+                if  (user.Text.Length == 0 && pswd.Password.Length == 0)
+                {
+                MessageBox.Show("Los datos introducidos son incorrectos");
+                }
+
+
                 if (user.Text == "medico" && pswd.Password == "medico")
                 {
                     medico gestionPaciente = new medico();
                     gestionPaciente.ShowDialog();
                     user.Text = null;
+                    this.Hide();
                     pswd.Password = null;
+
                 }
 
                 else if (user.Text == "farmaceutico" && pswd.Password == "farmaceutico")
@@ -116,6 +129,7 @@ namespace prototipo_hospital
                 Farmacia farmacia = new Farmacia();
                 farmacia.ShowDialog();
                 user.Text = null;
+                this.Hide();
                 pswd.Password = null;
 
                 }
@@ -125,6 +139,7 @@ namespace prototipo_hospital
                 Lavanderia lavanderia = new Lavanderia();
 				lavanderia.ShowDialog();
 				user.Text = null;
+                this.Hide();
                 pswd.Password = null;
 				}
                 
