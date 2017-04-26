@@ -134,7 +134,7 @@ namespace prototipo_hospital
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-           Owner.Show();
+           Owner.Show(); 
         }
     }
 }
