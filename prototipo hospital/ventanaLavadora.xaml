@@ -9,7 +9,7 @@
     <Grid Margin="0">
         <!-- Elementos que se repiten en las 4 lavadoras -->
         <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
-        <Label Name="estad" Content="Carga de la lavadora 1: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="257"/>
+        <Label Name="estado" Content="Estado de la lavadora 1: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="404"/>
         <Label Name="blancaTexto" Content="Ropa blanca: " HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Name="colorTexto" Content="Ropa de color: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Name="negraTexto" Content="Ropa de negra: " HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="125"/>

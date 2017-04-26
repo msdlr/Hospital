@@ -107,32 +107,28 @@ namespace prototipo_hospital
         }
 
         //Botones de cada lavadora
-        private void detalles_Click(int porcentaje,int blanca,int color,int negra)                         //Este función no está asociada con ningún botón
-        {
-            ventanaLavadora lavadoraVentana = new ventanaLavadora(porcentaje, blanca ,color,negra);
-            
-        }
+        
         private void detalles1_Click(object sender, RoutedEventArgs e)
         {
-            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[0], blanca[0], color[0], negra[0]);                                    //1
+            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[0]);                                    //1
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles2_Click(object sender, RoutedEventArgs e)
         {
-            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[1], blanca[1], color[1], negra[1]);                                    //2
+            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[1]);                                    //2
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles3_Click(object sender, RoutedEventArgs e)
         {
-            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[2], blanca[2], color[2], negra[2]);                                    //3
+            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[2]);                                    //3
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles4_Click(object sender, RoutedEventArgs e)
         {
-            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[3],blanca[3], color[3], negra[3]);                                    //4
+            ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[3]);                                    //4
             lavadoraVentana.ShowDialog();
         }
     }
