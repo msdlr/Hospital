@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
+        WindowState="Maximized"
 Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Background="#aec6cf" >
 
 
@@ -12,7 +13,7 @@ Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Backgr
 
         <Grid HorizontalAlignment="Left" Height="689" VerticalAlignment="Top" Width="1272">
             <Grid HorizontalAlignment="Left" Height="638" Margin="0,46,0,0" VerticalAlignment="Top" Width="1272">
-                <Menu Name="menuPrincipal" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="1272">
+                <Menu Background="#aec6cf" Name="menuPrincipal" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="1272">
                     <Button x:Name="BotonGestionpaciente" Content="Gestionar Paciente" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Margin="0,0,0,0" Click="BotonGestionpaciente_Click"  />
                     <Button x:Name="botonGuardarCambios" Content="Guardar Cambios" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Margin="0,0,0,0" Click="botonGuardarCambios_Click"/>
                     <Button x:Name="botonCitas" Content="Citas Pendientes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Click="botonCitas_Click"/>
@@ -22,8 +23,8 @@ Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Backgr
 
 
                 </Menu>
-                
-                <TabControl Name="datosPaciente" HorizontalAlignment="Left" Height="600" Margin="0,38,0,0" VerticalAlignment="Top" Width="1272" Visibility="Visible">
+
+                <TabControl Background="#aec6cf" Name="datosPaciente" HorizontalAlignment="Left" Height="600" Margin="0,38,0,0" VerticalAlignment="Top" Width="1272" Visibility="Visible">
 
                     <TabItem Header="Datos del Paciente">
                         <Grid Background="#FFE5E5E5">
@@ -93,7 +94,8 @@ Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Backgr
                     <TabItem Header="Pruebas recientes">
                         <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
                             <DataGrid Name="listaPruebas" HorizontalAlignment="Left" Height="440" Margin="60,32,0,0" VerticalAlignment="Top" Width="613" >
-          
+
+
                             </DataGrid>
                         </Grid>
                         
