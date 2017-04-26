@@ -115,10 +115,12 @@ namespace prototipo_hospital
 
                 if (user.Text == "medico" && pswd.Password == "medico")
                 {
+                    
                     medico gestionPaciente = new medico();
-                    gestionPaciente.ShowDialog();
-                    user.Text = null;
                     this.Hide();
+                    gestionPaciente.ShowDialog();
+                this.Show();
+                    user.Text = null;
                     pswd.Password = null;
 
                 }

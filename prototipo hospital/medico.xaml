@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
         WindowState="Maximized"
-Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Background="#aec6cf" >
+Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Background="#aec6cf"  >
 
 
     <Grid>

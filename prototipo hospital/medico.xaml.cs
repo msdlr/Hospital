@@ -163,5 +163,7 @@ namespace prototipo_hospital
             Agenda_Personal agenda = new Agenda_Personal();
             agenda.ShowDialog();
         }
+
+
     }
 }
