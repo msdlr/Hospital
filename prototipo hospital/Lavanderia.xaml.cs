@@ -113,24 +113,28 @@ namespace prototipo_hospital
         private void detalles1_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[0]);                                    //1
+            lavadoraVentana.Title = "Lavadora 1 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles2_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[1]);                                    //2
+            lavadoraVentana.Title = "Lavadora 2 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles3_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[2]);                                    //3
+            lavadoraVentana.Title = "Lavadora 3 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles4_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[3]);                                    //4
+            lavadoraVentana.Title = "Lavadora 4 ";
             lavadoraVentana.ShowDialog();
         }
 
