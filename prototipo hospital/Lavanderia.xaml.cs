@@ -132,9 +132,6 @@ namespace prototipo_hospital
             lavadoraVentana.ShowDialog();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-           Owner.Show(); 
-        }
+        
     }
 }

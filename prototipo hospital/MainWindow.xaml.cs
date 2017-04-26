@@ -119,7 +119,7 @@ namespace prototipo_hospital
                     medico gestionPaciente = new medico();
                     this.Hide();
                     gestionPaciente.ShowDialog();
-                this.Show();
+                    this.Show();
                     user.Text = null;
                     pswd.Password = null;
 
@@ -139,11 +139,12 @@ namespace prototipo_hospital
 				else if (user.Text == "lavanderia" && pswd.Password == "lavanderia")
 				{
                 Lavanderia lavanderia = new Lavanderia();
-				lavanderia.ShowDialog();
-				user.Text = null;
                 this.Hide();
+                lavanderia.ShowDialog();
+                this.Show();
+                user.Text = null;
                 pswd.Password = null;
-				}
+                }
                 
             }
     }

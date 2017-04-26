@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
  Title="Lavanderia" Height="358" Width="671.844"
-        ResizeMode="NoResize" Closing="Window_Closing" >
+        ResizeMode="NoResize">
     <Grid>
         <!-- Habitaciones proritarias -->
         <Label Name="fechaTexto" Content="Label" HorizontalAlignment="Left"
