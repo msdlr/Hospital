@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Drawing;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -28,6 +29,7 @@ namespace prototipo_hospital
         int[] blanca = new int[4];
         int[] color = new int[4];
         int[] negra = new int[4];
+        ProgressBar[] lavadoraP = new ProgressBar[4];
         Boolean first;
         //Contructor
         public Lavanderia()
