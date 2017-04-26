@@ -131,5 +131,10 @@ namespace prototipo_hospital
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[3]);                                    //4
             lavadoraVentana.ShowDialog();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+           Owner.Show(); 
+        }
     }
 }
