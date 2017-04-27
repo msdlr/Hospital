@@ -6,25 +6,25 @@
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
         WindowState="Maximized"
-Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Background="#aec6cf"  >
+Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
 
 
     <Grid>
 
         <Grid HorizontalAlignment="Left" Height="689" VerticalAlignment="Top" Width="1272">
-            <Grid HorizontalAlignment="Left" Height="638" Margin="0,46,0,0" VerticalAlignment="Top" Width="1272">
-                <Menu Background="#aec6cf" Name="menuPrincipal" HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="1272">
+            <Grid Margin="0,46,0,5">
+                <Menu Background="#aec6cf" Name="menuPrincipal" Height="auto" VerticalAlignment="Top">
                     <Button x:Name="BotonGestionpaciente" Content="Gestionar Paciente" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Margin="0,0,0,0" Click="BotonGestionpaciente_Click"  />
                     <Button x:Name="botonGuardarCambios" Content="Guardar Cambios" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Margin="0,0,0,0" Click="botonGuardarCambios_Click"/>
                     <Button x:Name="botonCitas" Content="Citas Pendientes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Click="botonCitas_Click"/>
                     <Button x:Name="botonSalida" Content="Salida" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Visibility="Visible" Margin="0,0,0,0" Click="botonSalida_Click"/>
-                    
+
 
 
 
                 </Menu>
 
-                <TabControl Background="#aec6cf" Name="datosPaciente" HorizontalAlignment="Left" Height="600" Margin="0,38,0,0" VerticalAlignment="Top" Width="1272" Visibility="Visible">
+                <TabControl Background="#aec6cf" Name="datosPaciente" Margin="0,38,0,0" Visibility="Visible">
 
                     <TabItem Header="Datos del Paciente">
                         <Grid Background="#FFE5E5E5">
@@ -50,16 +50,16 @@ Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Backgr
 
                             <Label Content="Fecha de alta" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="603,61,0,0"/>
                             <DatePicker Name ="fechaAlta" HorizontalAlignment="Left" Margin="730,63,0,0" VerticalAlignment="Top"/>
-                            
+
                             <Label Content="Sexo" HorizontalAlignment="Left" Margin="0,123,0,0" VerticalAlignment="Top"/>
                             <TextBox Name="Sexo" HorizontalAlignment="Left" Height="23" Margin="91,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False" />
-                            
+
                             <Label Name="fechaNacimiento" Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="0,154,0,0" VerticalAlignment="Top"/>
-                            
-                            
+
+
                             <Label Content="Dirección" HorizontalAlignment="Left" Margin="280,30,0,0" VerticalAlignment="Top"/>
                             <TextBox Name="direccion" HorizontalAlignment="Left" Height="23" Margin="380,34,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-                            
+
                             <Label Content="Teléfono" HorizontalAlignment="Left" Margin="280,61,0,0" VerticalAlignment="Top"/>
                             <TextBox Name="telefono" HorizontalAlignment="Left" Height="23" Margin="380,65,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
 
@@ -93,12 +93,58 @@ Title="Gestión Médica" Height="720" Width="1280" Loaded="Window_Loaded" Backgr
                     </TabItem>
                     <TabItem Header="Pruebas recientes">
                         <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
-                            <DataGrid Name="listaPruebas" HorizontalAlignment="Left" Height="440" Margin="60,32,0,0" VerticalAlignment="Top" Width="613" >
+                            <DataGrid Name="listaPruebas" SelectionUnit="FullRow" AutoGenerateColumns="True" IsSynchronizedWithCurrentItem="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Codigo" Binding="{Binding Codigo}" IsReadOnly="True">
+
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" IsReadOnly="True">
+
+                                    </DataGridTextColumn>
+                                    
+                                    <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" IsReadOnly="True">
+
+                                    </DataGridTextColumn>
+                                    <DataGridTextColumn Header="Ultima Fecha" Binding="{Binding UltimaFecha}" IsReadOnly="True">
+
+                                    </DataGridTextColumn>
+
+
+                                    <DataGridTemplateColumn    Header="Imagen" Width="100" IsReadOnly="True" CanUserResize="True">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    
+                                                    <Image Source="{Binding imagen.Source}"  Margin="0,0,0,0" Height="auto" Width="100"></Image>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+
+
+
+                                </DataGrid.Columns>
+
+                                <local:medicacionPaciente Codigo="001" Descripcion="cura" Nombre="Ibuprofeno" UltimaFecha="ayer" >
+                                    <local:medicacionPaciente.imagen>
+                                        <Image Source="ibuprofeno.jpg"/>
+                                    </local:medicacionPaciente.imagen>
+                                    
+
+                                </local:medicacionPaciente>
+
+                                <local:medicacionPaciente Codigo="002" Descripcion="cura" Nombre="Diazepam" UltimaFecha="ayer" >
+                                    <local:medicacionPaciente.imagen>
+                                        <Image Source="diazepam.jpg"/>
+                                    </local:medicacionPaciente.imagen>
+
+
+                                </local:medicacionPaciente>
 
 
                             </DataGrid>
                         </Grid>
-                        
+
                     </TabItem>
                     <TabItem Header="Historial Medico">
                         <Grid Background="#ffe5e5e5" Margin="0,0,0,0">

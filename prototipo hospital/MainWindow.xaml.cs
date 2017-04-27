@@ -65,6 +65,7 @@ namespace prototipo_hospital
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
         public string UltimaFecha{ get; set; }
+        public Image imagen { get; set; }
     }
 	public class datosLavanderia : Object
 	{

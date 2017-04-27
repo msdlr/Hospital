@@ -27,25 +27,27 @@ namespace prototipo_hospital
     {
         public Button boton1 = new Button();
         public Button boton = new Button();
+
         
         public int IDPaciente = 111222333;
-       
+
+
 
 
         public Boolean pacienteCargado = false;
         public Boolean datosGuardados = false;
         public medico()
         {
-            
+
 
             InitializeComponent();
             datosMedico medico = new datosMedico();
-            
-            nombreMedico.Content = medico.nombre ;
+
+            nombreMedico.Content = medico.nombre;
             idMedico.Content = medico.ID;
             //if (pacienteCargado == true) { menuPaciente.Visibility = Visibility.Visible; }
 
-
+            
         }
 
         private void BotonGestionpaciente_Click(object sender, RoutedEventArgs e)
@@ -69,7 +71,7 @@ namespace prototipo_hospital
                     gestionarPaciente.IsEnabled = false;
                     fechaNacimiento.Content = String.Concat("Fecha de Nacimiento: ", paciente.fechaNacimiento);
                     Sexo.Text = paciente.sexo[0];
-                    
+
                 }
 
             }
@@ -135,7 +137,7 @@ namespace prototipo_hospital
             nuevaConsulta.ShowDialog();
 
         }
-//borrar este metodo
+        //borrar este metodo
         private void boton1_click(object sender, RoutedEventArgs e)
         {
             datosPaciente paciente2 = new datosPaciente();
@@ -146,16 +148,21 @@ namespace prototipo_hospital
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+
+            
+            CheckBox pussy = new CheckBox();
+
             listaMedicacion.ItemsSource = new medicacionPaciente[]
             {
-                new medicacionPaciente{ Nombre = "Medicacion 1", Codigo= "1", Descripcion="medicacion 1", UltimaFecha= "21/3/2016"},
-                new medicacionPaciente{ Nombre = "Medicacion 2", Codigo= "1", Descripcion="medicacion 2", UltimaFecha= "21/3/2016"},
-                new medicacionPaciente{ Nombre = "Medicacion 3", Codigo= "1", Descripcion="medicacion 3", UltimaFecha= "21/3/2016"},
-                new medicacionPaciente{ Nombre = "Medicacion 4", Codigo= "1", Descripcion="medicacion 4", UltimaFecha= "21/3/2016"},
-                new medicacionPaciente{ Nombre = "Medicacion 5", Codigo= "1", Descripcion="medicacion 5", UltimaFecha= "21/3/2016"},
-                new medicacionPaciente{ Nombre = "Medicacion 6", Codigo= "1", Descripcion="medicacion 6", UltimaFecha= "21/3/2016"},
+                new medicacionPaciente{ Nombre = "Medicacion 1", Codigo= "1", Descripcion="medicacion 1", UltimaFecha= "21/3/2016",},
+                new medicacionPaciente{ Nombre = "Medicacion 2", Codigo= "1", Descripcion="medicacion 2", UltimaFecha= "21/3/2016",},
+                new medicacionPaciente{ Nombre = "Medicacion 3", Codigo= "1", Descripcion="medicacion 3", UltimaFecha= "21/3/2016",},
+                new medicacionPaciente{ Nombre = "Medicacion 4", Codigo= "1", Descripcion="medicacion 4", UltimaFecha= "21/3/2016",},
+                new medicacionPaciente{ Nombre = "Medicacion 5", Codigo= "1", Descripcion="medicacion 5", UltimaFecha= "21/3/2016",},
+                new medicacionPaciente{ Nombre = "Medicacion 6", Codigo= "1", Descripcion="medicacion 6", UltimaFecha= "21/3/2016",},
                 //boton1_click = boton.Click;
             };
+            
         }
 
         private void botonCitas_Click(object sender, RoutedEventArgs e)
