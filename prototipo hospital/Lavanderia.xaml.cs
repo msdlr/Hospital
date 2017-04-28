@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Drawing;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -28,6 +29,7 @@ namespace prototipo_hospital
         int[] blanca = new int[4];
         int[] color = new int[4];
         int[] negra = new int[4];
+        ProgressBar[] lavadoraP = new ProgressBar[4];
         Boolean first;
         //Contructor
         public Lavanderia()
@@ -111,24 +113,28 @@ namespace prototipo_hospital
         private void detalles1_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[0]);                                    //1
+            lavadoraVentana.Title = "Lavadora 1 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles2_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[1]);                                    //2
+            lavadoraVentana.Title = "Lavadora 2 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles3_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[2]);                                    //3
+            lavadoraVentana.Title = "Lavadora 3 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles4_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[3]);                                    //4
+            lavadoraVentana.Title = "Lavadora 4 ";
             lavadoraVentana.ShowDialog();
         }
 
