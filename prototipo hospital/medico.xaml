@@ -11,7 +11,7 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
 
     <Grid>
 
-        <Grid HorizontalAlignment="Left" Height="689" VerticalAlignment="Top" Width="1272">
+        <Grid Height="689" VerticalAlignment="Top">
             <Grid Margin="0,46,0,5">
                 <Menu Background="#aec6cf" Name="menuPrincipal" Height="auto" VerticalAlignment="Top">
                     <Button x:Name="BotonGestionpaciente" Content="Gestionar Paciente" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Height="auto" Margin="0,0,0,0" Click="BotonGestionpaciente_Click"  />
@@ -67,16 +67,8 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
                     </TabItem>
 
 
-                    <TabItem Header="Medicacion">
-                        <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
-                            <Button Name="añadirMedicacion" Content="Medicacion en planta" HorizontalAlignment="Left" Margin="480,508,0,0" VerticalAlignment="Top" Width="135"/>
-                            <DataGrid Name="listaMedicacion" SelectionUnit="FullRow" HorizontalAlignment="Left" Height="440" Margin="60,32,0,0" VerticalAlignment="Top" Width="613" AutoGenerateColumns="True"  >
-
-
-                            </DataGrid>
-                            <Button Name="nuevaReceta" Content="Nueva Receta" HorizontalAlignment="Left" Margin="670,508,0,0" VerticalAlignment="Top" Width="84"/>
-                            <Label x:Name="informeConsulta" Content="Ultimos medicamentos recetados:" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Width="284" FontSize="18"/>
-                        </Grid>
+                    <TabItem Header="Pruebas Recientes">
+                        <Grid Background="#FFE5E5E5" Margin="0,0,0,0"/>
                     </TabItem>
 
                     <TabItem Header="Curas">
@@ -91,9 +83,9 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
                     <TabItem Header="Dieta">
                         <Grid Background="#FFE5E5E5" Margin="0,0,0,0"/>
                     </TabItem>
-                    <TabItem Header="Pruebas recientes">
+                    <TabItem Header="Medicacion">
                         <Grid Background="#FFE5E5E5" Margin="0,0,0,0">
-                            <DataGrid Name="listaPruebas" SelectionUnit="FullRow" AutoGenerateColumns="True" IsSynchronizedWithCurrentItem="False">
+                            <DataGrid Name="listaPruebas" SelectionUnit="FullRow" AutoGenerateColumns="True" Margin="60,39,828,5" >
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Codigo" Binding="{Binding Codigo}" IsReadOnly="True">
 
@@ -101,7 +93,7 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
                                     <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" IsReadOnly="True">
 
                                     </DataGridTextColumn>
-                                    
+
                                     <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" IsReadOnly="True">
 
                                     </DataGridTextColumn>
@@ -114,7 +106,7 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
                                         <DataGridTemplateColumn.CellTemplate>
                                             <DataTemplate>
                                                 <StackPanel>
-                                                    
+
                                                     <Image Source="{Binding imagen.Source}"  Margin="0,0,0,0" Height="auto" Width="100"></Image>
                                                 </StackPanel>
                                             </DataTemplate>
@@ -129,7 +121,7 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
                                     <local:medicacionPaciente.imagen>
                                         <Image Source="ibuprofeno.jpg"/>
                                     </local:medicacionPaciente.imagen>
-                                    
+
 
                                 </local:medicacionPaciente>
 
@@ -143,12 +135,29 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
 
 
                             </DataGrid>
+                            <Label x:Name="informeConsulta" Content="Ultimos medicamentos recetados:" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Width="284" FontSize="18"/>
+                            <Grid Background="#77dd74" HorizontalAlignment="Left" Height="439" Margin="601,39,0,0" VerticalAlignment="Top" Width="520">
+                                <Label x:Name="informeConsulta_Copy1" Content="Nueva Receta:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="284" FontSize="18" Margin="10,0,0,0"/>
+                                <Label Content="Label" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Label" HorizontalAlignment="Left" Margin="256,39,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Label" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top"/>
+                                <Label Content="Label" HorizontalAlignment="Left" Margin="256,148,0,0" VerticalAlignment="Top"/>
+                                <TextBox HorizontalAlignment="Left" Height="73" Margin="10,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160"/>
+                                <TextBox HorizontalAlignment="Left" Height="73" Margin="256,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160"/>
+                                <TextBox HorizontalAlignment="Left" Height="73" Margin="10,179,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160"/>
+                                <TextBox HorizontalAlignment="Left" Height="73" Margin="10,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160"/>
+                                <TextBox HorizontalAlignment="Left" Height="73" Margin="256,179,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160"/>
+
+                                <Button Content="Imprimir Receta" HorizontalAlignment="Left" Margin="10,409,0,0" VerticalAlignment="Top" Width="Auto"/>
+                            </Grid>
+                            <Button Content="Nueva Receta" HorizontalAlignment="Left" Margin="601,510,0,0" VerticalAlignment="Top" Width="Auto"/>
+                            <Button x:Name="añadirMedicacion" Content="Medicacion en planta" HorizontalAlignment="Left" Margin="700,510,0,0" VerticalAlignment="Top" Width="135"/>
                         </Grid>
 
                     </TabItem>
                     <TabItem Header="Historial Medico">
                         <Grid Background="#ffe5e5e5" Margin="0,0,0,0">
-                            <Button Name="nuevaConsulta" Content="Nueva Consulta" HorizontalAlignment="Left" Margin="415,366,0,0" VerticalAlignment="Top" Width="103" Click="nuevaConsulta_Click" />
+                            <Button Name="nuevaConsulta" Content="Nueva Consulta" HorizontalAlignment="Left" Margin="10,542,0,0" VerticalAlignment="Top" Width="104" Click="nuevaConsulta_Click" />
 
                         </Grid>
                     </TabItem>
@@ -166,25 +175,25 @@ Title="Gestión Médica" Height="720" Width="1280"  Background="#aec6cf"  >
 
             </Grid>
         </Grid>
-        <DockPanel  Name="dockPanell" HorizontalAlignment="Stretch" Height="46" Margin="0,0,0,0" VerticalAlignment="Top" Width="auto">
-            <Menu Name="menuGestionMedica" Height="23" VerticalAlignment="Top" Width="1272">
+        <DockPanel HorizontalAlignment="Stretch" Name="dockPanell" Height="46" Margin="0,0,0,0" VerticalAlignment="Top"  Width="Auto">
+            <Menu DockPanel.Dock="Top" Name="menuGestionMedica" Height="23" VerticalAlignment="Top" HorizontalAlignment="Stretch" Width="Auto"   >
                 <MenuItem Height="23" Header="_Archivo">
                     <MenuItem Name="gestionarPaciente" Header="_Gestión de Pacientes" Click="gestionarPaciente_Click"/>
                     <MenuItem Name="Salir" Header="_Salir" Click="Salir_Click"/>
 
                 </MenuItem>
 
-                <MenuItem Height="23" Header="Ayuda"  >
+                <MenuItem Height="23" Header="Ayuda" Width="48"  >
                     <MenuItem Name="ayuda" Header="Manual"/>
 
                 </MenuItem>
 
             </Menu>
+            <Label Name="nombreMedico" Content="nombreMedico" Height="23" HorizontalAlignment="Right" Margin="1000,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
+            <Label Name="idMedico" Content="idMedico" Height="23" HorizontalAlignment="Right" Margin="0,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
 
-            <Label Name="nombreMedico" Content="nombreMedico" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="-200,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
-            <Label Name="idMedico" Content="idMedico" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="-100,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
+
         </DockPanel>
-
 
 
 

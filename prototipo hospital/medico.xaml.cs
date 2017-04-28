@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 //-------------------------//
 using System.IO;
 using Microsoft.Win32;
+using System.Xml;
 
 namespace prototipo_hospital
 {
@@ -146,24 +147,7 @@ namespace prototipo_hospital
 
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
 
-            
-            CheckBox pussy = new CheckBox();
-
-            listaMedicacion.ItemsSource = new medicacionPaciente[]
-            {
-                new medicacionPaciente{ Nombre = "Medicacion 1", Codigo= "1", Descripcion="medicacion 1", UltimaFecha= "21/3/2016",},
-                new medicacionPaciente{ Nombre = "Medicacion 2", Codigo= "1", Descripcion="medicacion 2", UltimaFecha= "21/3/2016",},
-                new medicacionPaciente{ Nombre = "Medicacion 3", Codigo= "1", Descripcion="medicacion 3", UltimaFecha= "21/3/2016",},
-                new medicacionPaciente{ Nombre = "Medicacion 4", Codigo= "1", Descripcion="medicacion 4", UltimaFecha= "21/3/2016",},
-                new medicacionPaciente{ Nombre = "Medicacion 5", Codigo= "1", Descripcion="medicacion 5", UltimaFecha= "21/3/2016",},
-                new medicacionPaciente{ Nombre = "Medicacion 6", Codigo= "1", Descripcion="medicacion 6", UltimaFecha= "21/3/2016",},
-                //boton1_click = boton.Click;
-            };
-            
-        }
 
         private void botonCitas_Click(object sender, RoutedEventArgs e)
         {
