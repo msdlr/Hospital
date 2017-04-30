@@ -5,45 +5,112 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
        mc:Ignorable="d"
-        Title="Farmacia" Height="720" Width="1280" Closing="Window_Closing"  Loaded="Window_Loaded" >
+        WindowState="Maximized" Background="#aec6cf"
+        Icon="logo-hospital.png"
+        Title="Farmacia" Height="720" Width="1280" Closing="Window_Closing" Loaded="Window_Loaded"  >
 
-    <Grid HorizontalAlignment="Left" Height="689" VerticalAlignment="Top" Width="1272">
-        <Grid HorizontalAlignment="Left" Height="638" Margin="0,46,0,0" VerticalAlignment="Top" Width="1272">
-            <Menu HorizontalAlignment="Left" Height="auto" VerticalAlignment="Top" Width="1262">
-                <Button Content="Gestionar Pacientes" Name="botomGesPacientes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="23"/>
-                <Button Content="Gestionar Farmacos" Name="botonGesFarmacos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="23" />
+    <Grid Height="689" VerticalAlignment="Top">
+        <Grid Height="638" Margin="0,46,0,0" VerticalAlignment="Top">
+            <Menu Height="auto" VerticalAlignment="Top" Margin="10,0" Background="#aec6cf">
                 <Button Content="Salir" Name="botonSalir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="23" Click="botonSalir_Click" />
             </Menu>
-            <TabControl HorizontalAlignment="Left" Height="598" Margin="0,30,0,0" VerticalAlignment="Top" Width="1262">
+            <TabControl Height="598" Margin="10,30,10,0" VerticalAlignment="Top">
                 <TabItem Header="Almacen">
                     <Grid Background="#FFE5E5E5">
-                        <DataGrid Name="medicamentos" AutoGenerateColumns="True" Height="550" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="1226" />
-                        <!--width = "auto"-->
+                        <DataGrid Name="medicamentos" AutoGenerateColumns="False" Height="548" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="1226" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="NombreMedicamento" Binding="{Binding NombreMedicamento}" />
+                                <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" />
+                                <DataGridTextColumn Header="Codigo" Binding="{Binding Codigo}" />
+                                <DataGridTextColumn Header="Existencias" Binding="{Binding Existencias}" />
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Name="pedido" Click="pedido_Click" Content="Realizar pedido" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Pacientes">
                     <Grid Background="#FFE5E5E5">
-                        <DataGrid Name="habitaciones" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="550" Margin="10,10,0,0" VerticalAlignment="Top" Width="600"/>
-                        <!--width = "auto"-->
-                        <DataGrid Name="datosPacientes" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="550" Margin="636,10,0,0" VerticalAlignment="Top" Width="600"/>
-                        <!--width = "auto"-->
+                        <DataGrid Name="habitaciones"  AutoGenerateColumns="False" HorizontalAlignment="Left" Height="548" Margin="10,10,0,0" VerticalAlignment="Top" Width="600">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Numero de Habitacion" Binding="{Binding NumeroHabitacion}" />
+                                <DataGridTextColumn Header="Numero de Pacientes" Binding="{Binding NumeroPacientes}" />
+                                <DataGridTextColumn Header="Urgencias" Binding="{Binding Urgencias}" />
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Name="ver" Click="ver_Click" Content="Ver habitacion" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Name="mapa" Click="mapa_Click" Content="Mapa habitacion" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <DataGrid Name="habitacion0" Visibility="Visible" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="548" Margin="636,10,0,0" VerticalAlignment="Top" Width="600"/>
+                        <DataGrid Name="habitacion1" Visibility="Hidden" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="548" Margin="636,10,0,0" VerticalAlignment="Top" Width="600"/>
+                        <DataGrid Name="habitacion2" Visibility="Hidden" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="548" Margin="636,10,0,0" VerticalAlignment="Top" Width="600"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Urgencias" Height="22" VerticalAlignment="Top" >
+                    <Grid  Background="#FFE5E5E5">
+                        <ListBox Name="listaUrgencias" HorizontalAlignment="Left" Height="508" Margin="10,50,0,0" VerticalAlignment="Top" Width="500" />
+                        <Canvas Background="White" HorizontalAlignment="Left" Height="548" Margin="536,10,0,0" VerticalAlignment="Top" Width="700">
+                            <Line Stroke="Red" X1="10" X2="200" Y1="20" Y2="20" StrokeEndLineCap="Triangle" StrokeThickness="10"  Fill="red" Height="45" Width="219" Canvas.Left="72" Canvas.Bottom="10" Canvas.Top="216" RenderTransformOrigin="0.5,0.5" >
+                                <Line.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Line.RenderTransform>
+                            </Line>
+                            <Label  Content="Porcentaje de medicamentos urgentes pedidos en los ultimos 7 dias" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="112" Canvas.Top="38" Height="40" Width="388"/>
+                            <Line Stroke="Red" X1="10" X2="150" Y1="20" Y2="20" StrokeEndLineCap="Triangle" StrokeThickness="10"  Fill="red" Height="39" Width="219" Canvas.Left="202" Canvas.Bottom="10" Canvas.Top="216" RenderTransformOrigin="0.5,0.5" >
+                                <Line.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Line.RenderTransform>
+                            </Line>
+                            <Label Content="Formoterol" Width="auto" Height="auto" Canvas.Left="146" Canvas.Top="355"/>
+                            <Label Content="Formoterol" Width="auto" Height="auto" Canvas.Left="278" Canvas.Top="355"/>
+                        </Canvas>
+                        <Label Content="Marque las urgencias ya prearadas y enviadas" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Gestion De Pedidos" >
+                    <Grid Background="#FFE5E5E5" >
+                        <DataGrid Name="datosPedidos" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="548" Margin="10,10,0,0" VerticalAlignment="Top" Width="600"/>
                     </Grid>
                 </TabItem>
             </TabControl>
         </Grid>
-        <DockPanel  Name="dockPanell" Height="auto" VerticalAlignment="Top">
-            <Menu Name="menuGestionMedica" Height="23" VerticalAlignment="Top" Width="1272" DockPanel.Dock="Top">
+        <DockPanel  HorizontalAlignment="Stretch" Name="dockPanell" Height="46" Margin="0,0,0,0" VerticalAlignment="Top"  Width="Auto">
+            <Menu DockPanel.Dock="Top" Name="menuFarmacia" Height="23" VerticalAlignment="Top" HorizontalAlignment="Stretch" Width="Auto"   >
                 <MenuItem Height="23" Header="_Archivo" Width="Auto" >
-                    <MenuItem Name="gestionarPaciente" Header="Gestión de _Pacientes"/>
-                    <MenuItem Name="gestionarFarmacos" Header="Gestión de _Farmacos" />
+
+
                     <MenuItem Name="salir" Header="_Salir"/>
                 </MenuItem>
-                <MenuItem Height="23" Header="Ayuda" >
-                    <MenuItem Name="ayuda" Header="_Manual"/>
-                </MenuItem>
+
             </Menu>
-            <Label Name="nombreFarmaceutico" Content="nombreFarmaceutico" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
-            <Label Name="idFarmaceutico" Content="idFarmaceutico" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,0" Width="62" />
+            <Label Name="nombreFarmaceutico" Content="nombreFarmaceutico" Height="23" HorizontalAlignment="Right" Margin="1000,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
+            <Label Name="idFarmaceutico" Content="idFarmaceutico" Height="23" HorizontalAlignment="Right" Margin="0,0,0,0" Width="auto" HorizontalContentAlignment="Right"/>
         </DockPanel>
     </Grid>
 </Window>

@@ -47,8 +47,7 @@ namespace prototipo_hospital
             {
                 lavadora[i] = rnd.Next(0, 100); lavadora[2] = 100;lavadora[3] = 0;//Pone lavadora3 a 100, lavadora4 a 0
             }
-            //Asignación individual a los progressbars (Me da pereza re-hacerlo con Arrays de progressbars)
-            //                      ¯\_(ツ)_/¯
+            //Asignación individual a los progressbars 
             lavadora1.Value = lavadora[0];
             lavadora2.Value = lavadora[1];
             //Puesto a 100 y a 0 para mostrar funciones cuando están a estos valores
@@ -102,13 +101,7 @@ namespace prototipo_hospital
             todasHabs.ShowDialog();                       //Conserva la ventana anterior detrás
         }
 
-        private void Lavadoras_Click(object sender, RoutedEventArgs e)
-        {
-            Lavadoras ventanaLavadoras = new Lavadoras(lavadora);
-            ventanaLavadoras.ShowDialog();
-        }
 
-        //Botones de cada lavadora
         
         private void detalles1_Click(object sender, RoutedEventArgs e)
         {

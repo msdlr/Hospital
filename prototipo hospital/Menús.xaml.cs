@@ -15,20 +15,19 @@ using System.Windows.Shapes;
 namespace prototipo_hospital
 {
     /// <summary>
-    /// Lógica de interacción para Agenda_Personal.xaml
+    /// Lógica de interacción para Menús.xaml
     /// </summary>
-    public partial class Agenda_Personal : Window
+    public partial class Menús : Window
     {
-        public Agenda_Personal()
+        public Menús()
         {
             InitializeComponent();
-            actividades.FontSize = 18 ;
-            actividades.Content = string.Concat("Actividades para hoy: ", DateTime.Today.ToShortDateString());
-
         }
 
-       
+        private void Cerrar(object sender, RoutedEventArgs e)
+        {
 
-
+            this.Close();
+        }
     }
 }

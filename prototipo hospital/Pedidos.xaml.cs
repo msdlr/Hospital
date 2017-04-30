@@ -15,20 +15,19 @@ using System.Windows.Shapes;
 namespace prototipo_hospital
 {
     /// <summary>
-    /// Lógica de interacción para Agenda_Personal.xaml
+    /// Lógica de interacción para Pedidos.xaml
     /// </summary>
-    public partial class Agenda_Personal : Window
+    public partial class Pedidos : Window
     {
-        public Agenda_Personal()
+        public Pedidos()
         {
             InitializeComponent();
-            actividades.FontSize = 18 ;
-            actividades.Content = string.Concat("Actividades para hoy: ", DateTime.Today.ToShortDateString());
-
         }
 
-       
-
-
+        private void pedir_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Pedido realizado", "Confirmar Pedido");
+            Close();
+        }
     }
 }

@@ -15,20 +15,16 @@ using System.Windows.Shapes;
 namespace prototipo_hospital
 {
     /// <summary>
-    /// Lógica de interacción para Agenda_Personal.xaml
+    /// Lógica de interacción para VentanaCurriculum.xaml
     /// </summary>
-    public partial class Agenda_Personal : Window
+    public partial class VentanaCurriculum : Window
     {
-        public Agenda_Personal()
+
+
+        public VentanaCurriculum()
         {
             InitializeComponent();
-            actividades.FontSize = 18 ;
-            actividades.Content = string.Concat("Actividades para hoy: ", DateTime.Today.ToShortDateString());
-
         }
-
-       
-
 
     }
 }

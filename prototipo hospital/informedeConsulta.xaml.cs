@@ -19,9 +19,12 @@ namespace prototipo_hospital
     /// </summary>
     public partial class informedeConsulta : Window
     {
+
+        
         public informedeConsulta()
         {
             InitializeComponent();
+            
         }
 
         public informedeConsulta(datosPaciente paciente)
@@ -34,6 +37,26 @@ namespace prototipo_hospital
             Sexo.Text = paciente.sexo[0];
             direccion.Text = paciente.direccion;
             telefono.Text = paciente.telefono.ToString();
+        }
+
+        public informedeConsulta(datosPaciente paciente, Boolean tratamiento)
+        {
+
+            InitializeComponent();
+            Nombre.Text = paciente.nombre;
+            Apellidos.Text = paciente.apellidos;
+            Edad.Text = paciente.edad.ToString();
+            fechaNacimiento.Content = String.Concat("Fecha de Nacimiento: ", paciente.fechaNacimiento);
+            Sexo.Text = paciente.sexo[0];
+            direccion.Text = paciente.direccion;
+            telefono.Text = paciente.telefono.ToString();
+            //metodo para cargar un tratamiento de ejemplo
+            motivoIngreso.Text = paciente.motivoconsulta;
+            antecedentesPersonales.Text = paciente.antecedentesPersonales;
+            enfermedadActual.Text = paciente.enfermedadActual;
+            exploracionFisica.Text = paciente.exploracionFisica;
+            diagnostico.Text = paciente.diagnostico;
+            
         }
 
 

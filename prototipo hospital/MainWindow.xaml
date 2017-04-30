@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
         WindowState="Maximized"
-        
+        Icon="logo-hospital.png"
 Title="Hospital" Height="360" Width="480" ResizeMode="NoResize" Background="#aec6cf">
     <Grid>
 
@@ -16,12 +16,14 @@ Title="Hospital" Height="360" Width="480" ResizeMode="NoResize" Background="#aec
                   Name="menuMain"
                   VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <!--Esto difiere del manual por alguna razón-->
-            <MenuItem Header="_Ayuda" Name="mainAyuda" />
-            <MenuItem Header="¿_Dónde estoy?" />
+            
+            <MenuItem Header="_Informacion" >
+                <MenuItem Header="_Manual" Name="manual" Click="manual_Click" />
+                <MenuItem Header="_Autores" Name="autores" Click="autores_Click" />
+            </MenuItem>
         </Menu>
-        <Label Content="Bienvenido/a  al hospital.&#xD;&#xA;Por favor, introduzca sus datos&#xD;&#xA; a continuación"
-               HorizontalAlignment="Left" Margin="229,97,0,0" VerticalAlignment="Top" Height="71" Width="179"
-               Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Bienvenido/a al hospital.&#xD;&#xA;Por favor, introduzca sus datos&#xD;&#xA; a continuación"
+               HorizontalAlignment="Left" Margin="229,97,0,0" VerticalAlignment="Top" Height="71" Width="235" FontSize="14" FontStyle="Italic" FontWeight="Bold"/>
         <!-- Zona Login -->
         <TextBox Name="user" HorizontalAlignment="Left" Height="23"
                  Margin="244,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
@@ -45,6 +47,8 @@ Title="Hospital" Height="360" Width="480" ResizeMode="NoResize" Background="#aec
 
         <!-- Cruz roja (logo) -->
         <Image Panel.ZIndex="1" Margin="40,45,0,0" Name="image1" Source="cruz-roja.bmp" HorizontalAlignment="Left" Width="204" Height="138" VerticalAlignment="Top" />
+        <Label Content="Por favor, haga click en Información/Manual para aprender &#10;a navegar por el prototipo. "
+            HorizontalAlignment="Left" Margin="0,245,0,0" VerticalAlignment="Top" Height="71" Width="343"  />
 
 
         <!-- Fondo -->

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
+        Icon="logo-hospital.png"
         Title="Habitaciones" Height="235.556" Width="300"
         ResizeMode="NoResize" 
         >
