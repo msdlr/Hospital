@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -61,6 +62,33 @@
     <Compile Include="Agenda Personal.xaml.cs">
       <DependentUpon>Agenda Personal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cocina.xaml.cs">
+      <DependentUpon>Cocina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gestionPacientes.xaml.cs">
+      <DependentUpon>gestionPacientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gestionPersonal.xaml.cs">
+      <DependentUpon>gestionPersonal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario.xaml.cs">
+      <DependentUpon>Inventario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mapa.xaml.cs">
+      <DependentUpon>Mapa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menús.xaml.cs">
+      <DependentUpon>Menús.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos.xaml.cs">
+      <DependentUpon>Pedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pedir.xaml.cs">
+      <DependentUpon>Pedir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaCurriculum.xaml.cs">
+      <DependentUpon>VentanaCurriculum.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ventanaLavadora.xaml.cs">
       <DependentUpon>ventanaLavadora.xaml</DependentUpon>
     </Compile>
@@ -68,7 +96,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Cocina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Farmacia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gestionPacientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gestionPersonal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -80,7 +120,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Lavadoras.xaml">
+    <Page Include="Inventario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,9 +145,6 @@
     <Compile Include="informedeConsulta.xaml.cs">
       <DependentUpon>informedeConsulta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Lavadoras.xaml.cs">
-      <DependentUpon>Lavadoras.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Lavanderia.xaml.cs">
       <DependentUpon>Lavanderia.xaml</DependentUpon>
     </Compile>
@@ -115,13 +152,33 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Mapa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="medico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menús.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NumeroPaciente.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pedidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pedir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaCurriculum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ventanaLavadora.xaml">
       <SubType>Designer</SubType>
@@ -150,6 +207,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="analitica.xps">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,6 +221,46 @@
   <ItemGroup>
     <Resource Include="cruz-roja.bmp" />
     <Resource Include="hospital.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="diazepam.jpg" />
+    <Resource Include="ibuprofeno.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hospital_P1.jpg" />
+    <Resource Include="hospital_P2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hospital_PB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="frente_craneo.jpg" />
+    <Resource Include="perfil_craneo.jpg" />
+    <Resource Include="planta_craneo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="colchicina.jpg" />
+    <Resource Include="omeprazol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo-hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="timpanoplastia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="litotricia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1.jpg" />
+    <Resource Include="2.jpg" />
+    <Resource Include="3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="farmacia.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
