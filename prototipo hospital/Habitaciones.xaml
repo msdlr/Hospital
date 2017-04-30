@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
+        Icon="logo-hospital.png"
         Title="Habitaciones" Height="235.556" Width="300"
-        ResizeMode="NoResize"
+        ResizeMode="NoResize" 
         >
-    <Grid>
+    <Grid Background="#B2FFF0" >
         <Label Content="Seleccione la habitación:" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="251"/>
         <TextBox Name="hab" HorizontalAlignment="Left" Height="25" Margin="10,36,0,0" 
                  TextWrapping="Wrap"  VerticalAlignment="Top" Width="136"

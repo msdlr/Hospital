@@ -22,40 +22,68 @@ namespace prototipo_hospital
         public Farmacia()
         {
             InitializeComponent();
+            this.Urgente();
             datosFarmacia farmaceutico = new datosFarmacia();
             nombreFarmaceutico.Content = farmaceutico.nombre;
             idFarmaceutico.Content = farmaceutico.ID;
         }
 
+        public void Urgente()
+        {
+            listaUrgencias.Items.Clear();
+            CheckBox listaU = null;
+            foreach (string listaUr in MedicinaUrgente)
+            {
+                listaU = new CheckBox();
+                listaU.Margin = new Thickness(0, 0, 0, 10);
+                listaU.Content = listaUr;
+                listaUrgencias.Items.Add(listaU);
+            }
+        }
+        private string[] MedicinaUrgente = { "Formoterol", "Abasaglar" };
+
         public class AlmacenMedicamentos : Object
         {
-            public string NombreMed { get; set; }
+            public string NombreMedicamento { get; set; }
             public string Descripcion { get; set; }
             public double Codigo { get; set; }
             public double Existencias { get; set; }
         }
 
+
         //Valores fijos
         private string[] S_NombreMed = { "Formoterol", "Abasaglar", "Loxapina" };
         private string[] S_Descrpcion = { "Para el aparato respiratorio, administrado por vía inhalatoria", "Insulina, glargina", "Para el aparato respiratorio, administrado por vía inhalatoria" };
         private double[] S_Codigo = { 0123456789, 9876543210, 0246813579 };
-        //private double[] S_Existencias = { 100, 100, 100};
+        //private double[] S_Existencias = { 1000, 1000, 1000};
+
+        public class AlmacenPedidos : Object
+        {
+            public Boolean Recibido { get; set; }
+            public string NombrePedido { get; set; }
+            public string FechaDePedida { get; set; }
+            public string EstimacionDeLlegada { get; set; }
+        }
+
+
 
         public class Habitaciones : Object
         {
-            public double NumHabitacion { get; set; }
-            public double NumPacientes { get; set; }
+            public double NumeroHabitacion { get; set; }
+            public double NumeroPacientes { get; set; }
+            public double Urgencias { get; set; }
         }
 
-        private double[] S_NumHabitacion = { 1, 2, 3 };             //Valor fijo
-        private double[] S_NumPacientes = { 4, 5, 2 };              //Valor no fijo
+        private double[] S_NumHabitacion = { 000, 100, 200 };           //Valor fijo
+        private double[] S_NumPacientes = { 4, 5, 2 };                  //Valor no fijo
+        private double[] S_Urgencias = { 0, 1, 1 };                     //Valor no fijo
 
         public class Datos : Object
         {
             public string Nombre { get; set; }
-            public string Apellidos { get; set; }
             public string Medicamentos { get; set; }
             public Sexo Sexo { get; set; }
+            public string DNI { get; set; }
         }
 
         //Valores no fijos
@@ -63,6 +91,13 @@ namespace prototipo_hospital
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            datosPedidos.ItemsSource = new AlmacenPedidos[]
+            {
+                new AlmacenPedidos{ Recibido = true, NombrePedido = S_NombreMed[0], FechaDePedida = "18/04/2017", EstimacionDeLlegada = "20/04/2017" },
+                new AlmacenPedidos{ Recibido = false, NombrePedido = S_NombreMed[1], FechaDePedida = "19/04/2017", EstimacionDeLlegada = "21/04/2017" },
+                new AlmacenPedidos{ Recibido = false, NombrePedido = S_NombreMed[2], FechaDePedida = "20/04/2017", EstimacionDeLlegada = "23/04/2017" }
+            };
+
             /*
             int i;
 
@@ -86,22 +121,35 @@ namespace prototipo_hospital
 
             habitaciones.ItemsSource = new Habitaciones[]
             {
-                new Habitaciones{NumHabitacion = S_NumHabitacion[0], NumPacientes = S_NumPacientes[0]},
-                new Habitaciones{NumHabitacion = S_NumHabitacion[1], NumPacientes = S_NumPacientes[1]},
+                new Habitaciones{NumeroHabitacion = S_NumHabitacion[0], NumeroPacientes = S_NumPacientes[0], Urgencias = S_Urgencias[0]},
+                new Habitaciones{NumeroHabitacion = S_NumHabitacion[1], NumeroPacientes = S_NumPacientes[1], Urgencias = S_Urgencias[1]},
+                new Habitaciones{NumeroHabitacion = S_NumHabitacion[2], NumeroPacientes = S_NumPacientes[2], Urgencias = S_Urgencias[2]}
             };
 
             medicamentos.ItemsSource = new AlmacenMedicamentos[]
             {
-                new AlmacenMedicamentos{NombreMed = S_NombreMed[0], Descripcion = S_Descrpcion[0], Existencias = 100, Codigo = S_Codigo[0] },
-                new AlmacenMedicamentos{NombreMed = S_NombreMed[1], Descripcion = S_Descrpcion[1], Existencias = 100, Codigo = S_Codigo[1] },
-                new AlmacenMedicamentos{NombreMed = S_NombreMed[2], Descripcion = S_Descrpcion[2], Existencias = 100, Codigo = S_Codigo[2] },
+                new AlmacenMedicamentos{NombreMedicamento = S_NombreMed[0], Descripcion = S_Descrpcion[0], Existencias = 1000, Codigo = S_Codigo[0] },
+                new AlmacenMedicamentos{NombreMedicamento = S_NombreMed[1], Descripcion = S_Descrpcion[1], Existencias = 800, Codigo = S_Codigo[1] },
+                new AlmacenMedicamentos{NombreMedicamento = S_NombreMed[2], Descripcion = S_Descrpcion[2], Existencias = 500, Codigo = S_Codigo[2] },
             };
 
 
-            datosPacientes.ItemsSource = new Datos[]
+            habitacion0.ItemsSource = new Datos[]
             {
-                new Datos{Nombre = "Jose", Apellidos = "Gomez Escudero", Medicamentos = S_NombreMed[0], Sexo = Sexo.Hombre },
-                new Datos{Nombre = "Laura", Apellidos = "Sanchez Pedregal", Medicamentos = S_NombreMed[1], Sexo = Sexo.Mujer }
+                new Datos{Nombre = "Gomez Escudero, Jose", Medicamentos = S_NombreMed[0], Sexo = Sexo.Hombre, DNI = "45682635L" },
+                new Datos{Nombre = "Sanchez Pedregal, Laura", Medicamentos = S_NombreMed[1], Sexo = Sexo.Mujer, DNI = "25639856G" }
+            };
+
+            habitacion1.ItemsSource = new Datos[]
+            {
+                new Datos{Nombre = "Pete Petrola, Pablo", Medicamentos = S_NombreMed[0], Sexo = Sexo.Hombre, DNI = "45652451P" },
+                new Datos{Nombre = "Gomariz Saelices, Rosa", Medicamentos = S_NombreMed[2], Sexo = Sexo.Mujer , DNI = "78963254F" }
+            };
+
+            habitacion2.ItemsSource = new Datos[]
+            {
+                new Datos{Nombre = "Hidalgo Diestro, Pedro", Medicamentos = S_NombreMed[2], Sexo = Sexo.Hombre },
+                new Datos{Nombre = "Gonzalez Madrigal, Ester", Medicamentos = S_NombreMed[1], Sexo = Sexo.Mujer }
             };
         }
 
@@ -112,12 +160,33 @@ namespace prototipo_hospital
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageBoxResult key = MessageBox.Show("Are your sure you want to quit", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+            MessageBoxResult key = MessageBox.Show("¿Seguro que quieres salir?", "Aceptar", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
             e.Cancel = (key == MessageBoxResult.No);
         }
         private void botonSalir_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void pedido_Click(object sender, RoutedEventArgs e)
+        {
+            Pedidos hacerPedido = new Pedidos();
+            hacerPedido.ShowDialog();
+        }
+
+        private void ver_Click(object sender, RoutedEventArgs e)
+        {
+            if (habitacion1.Visibility == Visibility.Visible)
+            {
+                habitacion1.Visibility = Visibility.Hidden;
+                habitacion0.Visibility = Visibility.Visible;
+            }
+            habitacion1.Visibility = Visibility.Visible;
+        }
+        private void mapa_Click(object sender, RoutedEventArgs e)
+        {
+            Mapa mapahabitacion = new Mapa();
+            mapahabitacion.ShowDialog();
         }
     }
 }

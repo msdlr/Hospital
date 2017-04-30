@@ -1,0 +1,20 @@
+﻿<Window x:Class="prototipo_hospital.Inventario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prototipo_hospital"
+        mc:Ignorable="d"
+        Icon="logo-hospital.png"
+        Title="Inventario" Height="519.925" Width="677.82"  Loaded="Window_Loaded"  >
+    <Grid Background="#aec6cf" Margin="-2,-3,-2,-1">
+        <Button Click="Cerrar" Content="Volver" HorizontalAlignment="Left" Height="28" Margin="328,455,0,0" VerticalAlignment="Top" Width="62"/>
+        <Button Click="Pedir" Content="Pedir" HorizontalAlignment="Left" Height="28" Margin="251,455,0,0" VerticalAlignment="Top" Width="62"/>
+
+        <DataGrid  x:Name="InventarioLista" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="440" Margin="10,10,0,0" VerticalAlignment="Top" Width="654">
+
+        </DataGrid>
+
+
+    </Grid>
+</Window>

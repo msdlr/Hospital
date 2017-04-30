@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
-        Title="ventanaLavadora" Height="288.581" Width="500">
-    <Grid Margin="0">
+        Icon="logo-hospital.png"
+        Title="Lavadora" Height="288.581" Width="500" >
+    <Grid Margin="0" Background="#aec6cf">
         <!-- Elementos que se repiten en las 4 lavadoras -->
         <Label Content="ESTADO ACTUAL" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Name="estado" Content="Estado de la lavadora 1: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="404"/>

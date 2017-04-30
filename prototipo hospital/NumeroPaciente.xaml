@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
-        Title="Número de Paciente" Height="200" Width="300" ResizeMode="NoResize">
+        Icon="logo-hospital.png"
+        Title="Número de Paciente" Height="200" Width="300" ResizeMode="NoResize" Background="#aec6cf">
     <Grid>
         <Button Name="botonabrirpaciente" Content="Abrir" HorizontalAlignment="Left" Margin="110,111,0,0" VerticalAlignment="Top" Width="75" Click="botonabrirpaciente_Click" KeyDown="botonabrirpaciente_Click" IsDefault="True" />
         <TextBox Name="campoIDPaciente" HorizontalAlignment="Left" Height="24" Margin="11,66,0,0" VerticalAlignment="Top" Width="272" />

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace prototipo_hospital
 {
@@ -19,7 +20,7 @@ namespace prototipo_hospital
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     /// 
-    
+
 
     public class datosMedico : Object
     {
@@ -51,11 +52,12 @@ namespace prototipo_hospital
         public string direccion = "Melchor de Macanaz 27, 1ºD, Albacete";
         public int telefono = 685757853;
         //consulta anterior
-        public string motivoconsulta = "completar string";
-        public string antecedentesPersonales = "completar string";
-        public string enfermedadActual= "completar string";
-        public string exploracionFisica = "completar string";
-        public string diagnostico = "completar string";
+        public string motivoconsulta = "Refiere dolor torácico, presion en el pecho y falta de respiración";
+        public string antecedentesPersonales = "No fumador, sin cardiopatía ni neumonía conocída, en tratamiento por rinitis alergica. HErnia de hiato, Tratamiento actual:" +
+            "Atorvastina, Ebastina. Cirugias previas: Colesteatoma y timpanoplastia.";
+        public string enfermedadActual = "Acude a consulta por malestar general y opresion percordial de varios dias de evolución";
+        public string exploracionFisica = "AC tonos ritmicos, AP normal";
+        public string diagnostico = "Posible pericarditis aguda o crisis hipertensiva. Tratamiento: buprofeno 600 cada 12 horas durante una semana, Colchicina 1mg, 1 comprimido diario.";
 
     }
     public class medicacionPaciente : Object
@@ -63,58 +65,142 @@ namespace prototipo_hospital
         public string Nombre { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }
-        public string UltimaFecha{ get; set; }
+        public string UltimaFecha { get; set; }
+        public Image imagen { get; set; }
     }
-	public class datosLavanderia : Object
-	{
-		public string nombre = "Jose Martinez ";
+    public class datosLavanderia : Object
+    {
+        public string nombre = "Jose Martinez ";
         public string ID = "34516887H";
         public string usuario = "lavanderia";
         public string password = "lavanderia";
-	}
+    }
 
     public partial class MainWindow : Window
+    {
+        
+        public MainWindow()
         {
+            InitializeComponent();
+            startclock();
 
 
+        }
 
-            public MainWindow()
+        private void startclock()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += tickevent;
+            timer.Start();
+        }
+
+        private void tickevent(object sender, EventArgs e)
+        {
+            reloj.Text = DateTime.Now.ToString();
+        }
+
+        private void mainAceptar_Click(object sender, RoutedEventArgs e)
+        {
+            if (user.Text != pswd.Password)
             {
-                InitializeComponent();
-            
-
+                MessageBox.Show("Los datos introducidos son incorrectos");
             }
 
-            private void mainAceptar_Click(object sender, RoutedEventArgs e)
+            if (user.Text.Length == 0 && pswd.Password.Length == 0)
             {
-                if (user.Text == "medico" && pswd.Password == "medico")
-                {
-                    medico gestionPaciente = new medico();
-                    gestionPaciente.ShowDialog();
-                    user.Text = null;
-                    pswd.Password = null;
-                }
+                MessageBox.Show("Los datos introducidos son incorrectos");
+            }
 
-                else if (user.Text == "farmaceutico" && pswd.Password == "farmaceutico")
-                {
+            if (user.Text.Length != pswd.Password.Length )
+            {
+                MessageBox.Show("Los datos introducidos son incorrectos");
+            }
 
-                Farmacia farmacia = new Farmacia();
-                farmacia.ShowDialog();
+
+            if (user.Text == "medico" && pswd.Password == "medico")
+            {
+
+                medico gestionPaciente = new medico();
+                this.Hide();
+                gestionPaciente.ShowDialog();
+                this.Show();
                 user.Text = null;
                 pswd.Password = null;
 
-                }
-                
-				else if (user.Text == "lavanderia" && pswd.Password == "lavanderia")
-				{
-                Lavanderia lavanderia = new Lavanderia();
-				lavanderia.ShowDialog();
-				user.Text = null;
-                pswd.Password = null;
-				}
-                
             }
-    }
 
+            else if (user.Text == "farmaceutico" && pswd.Password == "farmaceutico")
+            {
+
+                Farmacia farmacia = new Farmacia();
+                this.Hide();
+                farmacia.ShowDialog();
+                this.Show();
+                user.Text = null;
+                pswd.Password = null;
+
+            }
+
+            else if (user.Text == "lavanderia" && pswd.Password == "lavanderia")
+            {
+                Lavanderia lavanderia = new Lavanderia();
+                this.Hide();
+                lavanderia.ShowDialog();
+                this.Show();
+                user.Text = null;
+                pswd.Password = null;
+            }
+
+            else if (user.Text == "cocina" && pswd.Password == "cocina")
+            {
+                Cocina cocina = new Cocina();
+                this.Hide();
+                cocina.ShowDialog();
+                this.Show();
+                user.Text = null;
+                pswd.Password = null;
+
+            }
+
+            else if (user.Text == "gestionpersonal" && pswd.Password == "gestionpersonal")
+            {
+                gestionPersonal gestion_personal = new gestionPersonal();
+                this.Hide();
+                gestion_personal.ShowDialog();
+                this.Show();
+                user.Text = null;
+                pswd.Password = null;
+
+            }
+            else if (user.Text == "gestionpacientes" && pswd.Password == "gestionpacientes")
+            {
+                gestionPacientes gestion_pacientes = new gestionPacientes();
+                this.Hide();
+                gestion_pacientes.ShowDialog();
+                this.Show();
+                user.Text = null;
+                pswd.Password = null;
+
+            }
+
+
+
+
+        }
+
+        private void autores_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Miguel Sanchez de la Rosa: Lavanderia y pantalla de login."+ Environment.NewLine +"Pablo Gomariz Martinez: Medico y Gestion de Citas." + Environment.NewLine +
+                "Jesús Gonzalez Cebrián: Farmacia y Gestion de personal."+ Environment.NewLine + "David Parra Horcajada: Cocina.");
+        }
+
+        public void manual_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Usuario y contraseña para acceder a las ventanas:" + Environment.NewLine + " Lavanderia: lavanderia" + Environment.NewLine +
+                "Medico: medico" + Environment.NewLine + " Farmacia: farmaceutico" + Environment.NewLine + "Gestion de Citas: gestionpacientes" + Environment.NewLine + "Gestion de personal: gestionpersonal"
+                + Environment.NewLine + "Cocina: cocina" + Environment.NewLine + "El numero de paciente de ejemplo para cargar es: 111222333");
+        }
+    }
 }
 

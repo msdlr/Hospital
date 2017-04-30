@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Drawing;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -28,6 +29,7 @@ namespace prototipo_hospital
         int[] blanca = new int[4];
         int[] color = new int[4];
         int[] negra = new int[4];
+        ProgressBar[] lavadoraP = new ProgressBar[4];
         Boolean first;
         //Contructor
         public Lavanderia()
@@ -45,8 +47,7 @@ namespace prototipo_hospital
             {
                 lavadora[i] = rnd.Next(0, 100); lavadora[2] = 100;lavadora[3] = 0;//Pone lavadora3 a 100, lavadora4 a 0
             }
-            //Asignación individual a los progressbars (Me da pereza re-hacerlo con Arrays de progressbars)
-            //                      ¯\_(ツ)_/¯
+            //Asignación individual a los progressbars 
             lavadora1.Value = lavadora[0];
             lavadora2.Value = lavadora[1];
             //Puesto a 100 y a 0 para mostrar funciones cuando están a estos valores
@@ -100,36 +101,36 @@ namespace prototipo_hospital
             todasHabs.ShowDialog();                       //Conserva la ventana anterior detrás
         }
 
-        private void Lavadoras_Click(object sender, RoutedEventArgs e)
-        {
-            Lavadoras ventanaLavadoras = new Lavadoras(lavadora);
-            ventanaLavadoras.ShowDialog();
-        }
 
-        //Botones de cada lavadora
         
         private void detalles1_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[0]);                                    //1
+            lavadoraVentana.Title = "Lavadora 1 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles2_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[1]);                                    //2
+            lavadoraVentana.Title = "Lavadora 2 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles3_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[2]);                                    //3
+            lavadoraVentana.Title = "Lavadora 3 ";
             lavadoraVentana.ShowDialog();
         }
 
         private void detalles4_Click(object sender, RoutedEventArgs e)
         {
             ventanaLavadora lavadoraVentana = new ventanaLavadora(lavadora[3]);                                    //4
+            lavadoraVentana.Title = "Lavadora 4 ";
             lavadoraVentana.ShowDialog();
         }
+
+        
     }
 }

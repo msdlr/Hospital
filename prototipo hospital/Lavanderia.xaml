@@ -5,37 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:prototipo_hospital"
         mc:Ignorable="d"
+        Icon="logo-hospital.png"
  Title="Lavanderia" Height="358" Width="671.844"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" Background="#A9F5BC">
+
+    <Window.Resources>
+        <Style x:Key="lavanderiaStyle" TargetType="Control">
+            <Setter Property="Background" Value="LightYellow" />
+            <Setter Property="Foreground" Value="Black" />
+            <!--
+            <Setter Property="FontFamily" Value="Comic Sans MS" />
+            -->
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#0000FF" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <!-- Habitaciones proritarias -->
         <Label Name="fechaTexto" Content="Label" HorizontalAlignment="Left"
                            Margin="10,20,0,0" VerticalAlignment="Top"  
-                           Height="24" Width="75"
+                           Height="24" Width="75" Background="LightBlue"
                            />
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left"
                             Height="24" Margin="10,20,0,0" VerticalAlignment="Top" Width="75"
                             />
-        <Label Content="Habitaciones proritarias:" HorizontalAlignment="Left" 
+        <Label Panel.ZIndex="1" Content="Habitaciones proritarias:" HorizontalAlignment="Left" 
                            Margin="10,61,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
-        <Label Name="hab0" Content="Hab0" HorizontalAlignment="Left" 
+        <Label Panel.ZIndex="1" Name="hab0" Content="Hab0" HorizontalAlignment="Left" 
                         Margin="10,87,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
-        <Label Name="hab1" Content="Hab1" HorizontalAlignment="Left" 
+        <Label Panel.ZIndex="1"  Name="hab1" Content="Hab1" HorizontalAlignment="Left" 
                         Margin="10,118,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
-        <Label Name="hab2" Content="Hab2" HorizontalAlignment="Left" 
+        <Label Panel.ZIndex="1"  Name="hab2" Content="Hab2" HorizontalAlignment="Left" 
                         Margin="10,149,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
-        <Label Name="hab3" Content="Hab3" HorizontalAlignment="Left" 
+        <Label Panel.ZIndex="1"  Name="hab3" Content="Hab3" HorizontalAlignment="Left" 
                         Margin="10,180,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
-        <Label Name="hab4" Content="Hab4" HorizontalAlignment="Left" 
+        <Label Panel.ZIndex="1"  Name="hab4" Content="Hab4" HorizontalAlignment="Left" 
                         Margin="10,211,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
-        <Label Name="hab5" Content="Hab5" HorizontalAlignment="Left" 
+        <Label Panel.ZIndex="1"  Name="hab5" Content="Hab5" HorizontalAlignment="Left" 
                         Margin="10,242,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
+        <Border  Panel.ZIndex="0" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left"
+                 Height="212" Margin="10,56,0,0" VerticalAlignment="Top" Width="140"
+                 Background="WhiteSmoke"/>
 
 
         <!-- Botón a ventana de Habitaciones -->
         <Button Name="todasHabitaciones" Content="Todas las habitaciones" HorizontalAlignment="Left" 
                             Margin="10,273,0,0" VerticalAlignment="Top" Width="140" Height="35"
-                             Click="todasHabitaciones_Click"/>
+                             Click="todasHabitaciones_Click" Style="{StaticResource lavanderiaStyle}"/>
 
         <!-- ProgressBars de lavadoras, más falsas que un euro con la cara de Popeye pero dan el pego  -->
         <Label Content="Lavadora 1"
@@ -67,20 +87,32 @@
                            VerticalAlignment="Top" Width="34" Height="26"/>
         <!-- Progressbars de lavadoras -->
         <ProgressBar Name="lavadora1" HorizontalAlignment="Left" Height="26" Margin="340,56,0,0"   
-                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50" />
+                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50" 
+                     Foreground="DarkSlateBlue" Background="LightYellow"/>
         <ProgressBar Name="lavadora2" HorizontalAlignment="Left" Height="26" Margin="340,87,0,0"   
-                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50"    />
+                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50"
+                     Foreground="DarkSlateBlue" Background="LightYellow"/>
         <ProgressBar Name="lavadora3" HorizontalAlignment="Left" Height="26" Margin="340,118,0,0"  
-                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50"    />
+                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50" 
+                     Foreground="DarkSlateBlue" Background="LightYellow"/>
         <ProgressBar Name="lavadora4" HorizontalAlignment="Left" Height="26" Margin="340,149,0,0"  
-                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50"    />
+                     VerticalAlignment="Top" Width="100" Maximum="100" Minimum="0" Value="50" 
+                     Foreground="DarkSlateBlue" Background="LightYellow"/>
         <!-- Fin progressbars -->
         <!--
         <Button Name="Lavadoras" Content="Detalles" HorizontalAlignment="Left" Margin="340,191,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="Lavadoras_Click"/>
         -->
-        <Button Name="detalles1" Content="Detalles" HorizontalAlignment="Left" Margin="499,56,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles1_Click"/>
-        <Button Name="detalles2" Content="Detalles" HorizontalAlignment="Left" Margin="499,87,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles2_Click"/>
-        <Button Name="detalles3" Content="Detalles" HorizontalAlignment="Left" Margin="499,118,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles3_Click"/>
-        <Button Name="detalles4" Content="Detalles" HorizontalAlignment="Left" Margin="499,149,0,0" VerticalAlignment="Top" Width="100" Height="26" Click="detalles4_Click"/>
-    </Grid>
+        <Button Style="{StaticResource lavanderiaStyle}" Name="detalles1" Content="Detalles" 
+                HorizontalAlignment="Left" Margin="499,56,0,0" VerticalAlignment="Top"
+                Width="100" Height="26" Click="detalles1_Click"/>
+        <Button Style="{StaticResource lavanderiaStyle}" Name="detalles2" Content="Detalles" 
+                HorizontalAlignment="Left" Margin="499,87,0,0" VerticalAlignment="Top" 
+                Width="100" Height="26" Click="detalles2_Click"/>
+        <Button Style="{StaticResource lavanderiaStyle}" Name="detalles3" Content="Detalles" 
+                HorizontalAlignment="Left" Margin="499,118,0,0" VerticalAlignment="Top" 
+                Width="100" Height="26" Click="detalles3_Click"/>
+        <Button Style="{StaticResource lavanderiaStyle}" Name="detalles4" Content="Detalles" 
+                HorizontalAlignment="Left" Margin="499,149,0,0" VerticalAlignment="Top" 
+                Width="100" Height="26" Click="detalles4_Click"/>
+            </Grid>
 </Window>
